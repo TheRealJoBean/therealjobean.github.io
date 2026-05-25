@@ -680,8 +680,8 @@
           <div class="hero-stat-desc">DAQ acquisition rate · NI PXI</div>
         </div>
         <div>
-          <div class="hero-stat-val">260<span>+ hr</span></div>
-          <div class="hero-stat-desc">Wind tunnel + live flight test</div>
+          <div class="hero-stat-val">2<span> active</span></div>
+          <div class="hero-stat-desc">Detonation programs · Phase I &amp; II</div>
         </div>
       </div>
       <div class="hero-ctas">
@@ -717,11 +717,15 @@
       </div>
 
       <div class="projects-grid">
-        <!-- FEATURED: Detonation Program -->
+
+        <!-- PRJ-001: Detonation Tube Phase I (full width) -->
         <div class="project-card featured" onclick="openModal('modal-det')">
-          <div class="card-num">PRJ-001 · FEATURED</div>
-          <h3 class="card-title">Rotating Detonation Engine<br>& Detonation Tube Program</h3>
-          <p class="card-desc">End-to-end design, instrumentation, and test campaign for a laboratory detonation tube — validating a physics-based detonation model and establishing the propulsion test infrastructure for a full RDE implementation. Research project under ERAU.</p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div class="card-num">PRJ-001 · FEATURED</div>
+            <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;background:rgba(217,95,26,0.07);">Phase I of II · RDE Program</div>
+          </div>
+          <h3 class="card-title">Detonation Tube Program<br><span style="color:var(--text-muted);font-size:0.68em;letter-spacing:0.04em;font-weight:600;">Rotating Detonation Engine — Phase I</span></h3>
+          <p class="card-desc">End-to-end design, instrumentation, and test campaign for a linear detonation tube — the deliberate precursor to a full annular LOX/kerosene RDE. Built to validate a physics-based detonation model and prove out test infrastructure before committing to RDE hardware. Every subsystem — DAQ, ignition, cooling, safety architecture — carries forward directly into Phase II.</p>
           <div class="card-tags">
             <span class="tag orange">Propulsion</span>
             <span class="tag orange">Test Stand</span>
@@ -731,18 +735,51 @@
             <span class="tag">LabVIEW</span>
             <span class="tag">CFD · ANSYS</span>
           </div>
-          <div class="card-status">
-            <div class="status-dot"></div>
-            <span class="status-text">Active · Aug 2025 – Present</span>
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:auto;">
+            <div class="card-status">
+              <div class="status-dot"></div>
+              <span class="status-text">Active · Aug 2025 – Present</span>
+            </div>
+            <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);opacity:0.8;">↓ Continues as PRJ-002</span>
           </div>
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- DAQ -->
+        <!-- Phase connector bar -->
+        <div style="grid-column:span 2;background:var(--bg);border-left:1px solid var(--border);border-right:1px solid var(--border);height:26px;display:flex;align-items:center;justify-content:center;position:relative;">
+          <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--accent);opacity:0.35;"></div>
+          <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);background:var(--bg);padding:0 16px;position:relative;z-index:1;">RDE Development Program · Phase I → Phase II</span>
+        </div>
+
+        <!-- PRJ-002: RDE Phase II (full width, directly below PRJ-001) -->
+        <div class="project-card featured" onclick="openModal('modal-rde')" style="border-top:2px solid var(--accent);">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div class="card-num">PRJ-002 · ACTIVE</div>
+            <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;background:rgba(217,95,26,0.07);">Phase II · Continues from PRJ-001</div>
+          </div>
+          <h3 class="card-title">Rotating Detonation Engine —<br><span style="color:var(--accent2);">Phase II Development</span></h3>
+          <p class="card-desc">Annular LOX/kerosene RDE program — the direct continuation of the detonation tube work. CJ detonation cell sizing, preliminary chamber pressure and heat flux modeling, impinging-element injector cold-flow characterization, and OpenFOAM mesh setup all running in parallel. Full DAQ and test architecture inherited from Phase I.</p>
+          <div class="card-tags">
+            <span class="tag orange">RDE · LOX / Kerosene</span>
+            <span class="tag orange">Annular</span>
+            <span class="tag">OpenFOAM / C++</span>
+            <span class="tag">Cantera</span>
+            <span class="tag">Impinging Injector</span>
+            <span class="tag">Heat Transfer Sim</span>
+            <span class="tag">CFD</span>
+          </div>
+          <div class="card-status">
+            <div class="status-dot"></div>
+            <span class="status-text">Early Phase · 2025 – Present</span>
+          </div>
+          <div class="card-arrow">↗</div>
+        </div>
+
+        <!-- PRJ-003: DAQ -->
         <div class="project-card" onclick="openModal('modal-daq')">
-          <div class="card-num">PRJ-002</div>
+          <div class="card-num">PRJ-003</div>
           <h3 class="card-title">DAQ & Instrumentation Architecture</h3>
-          <p class="card-desc">High-speed data acquisition and telemetry system for reactive propulsion test environments. NI PXI at 10 MHz, live signal processing, EMI mitigation, and post-processing pipeline.</p>
+          <p class="card-desc">High-speed data acquisition and telemetry system for reactive propulsion test environments. NI PXI at 10 MHz, live signal processing, EMI mitigation, and post-processing pipeline. Architecture shared and inherited across both RDE program phases.</p>
           <div class="card-tags">
             <span class="tag">NI PXI</span>
             <span class="tag">LabVIEW</span>
@@ -752,9 +789,9 @@
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- UAV -->
+        <!-- PRJ-004: UAV -->
         <div class="project-card" onclick="openModal('modal-uav')">
-          <div class="card-num">PRJ-003</div>
+          <div class="card-num">PRJ-004</div>
           <h3 class="card-title">Agricultural UAV Platform Development</h3>
           <p class="card-desc">Founded and operated an independent engineering venture delivering four generations of agricultural UAV platforms — 15–20 operational units across real-world field deployments. Full lifecycle ownership from aerodynamic design through field ops.</p>
           <div class="card-tags">
@@ -764,17 +801,17 @@
             <span class="tag">Iterative Development</span>
           </div>
           <div class="card-status">
-            <div class="status-dot" style="background:#7a6f66; box-shadow: none; animation: none;"></div>
-            <span class="status-text" style="color: var(--text-muted);">Concluded · May 2022 – Aug 2025</span>
+            <div class="status-dot" style="background:#7a6f66;box-shadow:none;animation:none;"></div>
+            <span class="status-text" style="color:var(--text-muted);">Concluded · May 2022 – Aug 2025</span>
           </div>
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- Avionics -->
+        <!-- PRJ-005: Avionics -->
         <div class="project-card" onclick="openModal('modal-avionics')">
-          <div class="card-num">PRJ-004</div>
+          <div class="card-num">PRJ-005</div>
           <h3 class="card-title">Avionics Hardware Validation &<br>Systems Integration</h3>
-          <p class="card-desc">Hardware-level validation, PCB bring-up, EMI/impedance constraint work, and schematic review in a defense-adjacent avionics environment under Canyon AeroConnect. Focus on integration constraints, hardware debugging, and manufacturing interface.</p>
+          <p class="card-desc">Hardware-level validation, PCB bring-up, EMI/impedance constraint work, and schematic review in a defense-adjacent avionics environment under Canyon AeroConnect.</p>
           <div class="card-tags">
             <span class="tag">Avionics</span>
             <span class="tag">PCB</span>
@@ -787,7 +824,7 @@
           </div>
           <div class="card-arrow">↗</div>
         </div>
-      </div>
+
     </div>
   </section>
 
@@ -1068,7 +1105,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="left">© 2025 Johaneev Sheelam &nbsp;·&nbsp; Propulsion Systems Engineering</div>
-    <div class="right">ERAU · Prescott, AZ · Dec 2028</div>
+    <div class="right">ERAU · Prescott, AZ · Dec 2028 &nbsp;·&nbsp; Updated May 2026</div>
   </footer>
 
 
@@ -1195,7 +1232,7 @@
     <div class="modal">
       <div class="modal-header">
         <div>
-          <div class="label" style="margin-bottom:8px;">PRJ-002 · Instrumentation</div>
+          <div class="label" style="margin-bottom:8px;">PRJ-003 · Instrumentation</div>
           <h2 class="modal-title">DAQ &amp; Instrumentation Architecture</h2>
         </div>
         <button class="modal-close" onclick="closeModal('modal-daq')">✕ Close</button>
@@ -1232,7 +1269,7 @@
     <div class="modal">
       <div class="modal-header">
         <div>
-          <div class="label" style="margin-bottom:8px;">PRJ-003 · Independent Venture · May 2022 – Aug 2025</div>
+          <div class="label" style="margin-bottom:8px;">PRJ-004 · Independent Venture · May 2022 – Aug 2025</div>
           <h2 class="modal-title">Agricultural UAV Platform Development</h2>
         </div>
         <button class="modal-close" onclick="closeModal('modal-uav')">✕ Close</button>
@@ -1270,7 +1307,7 @@
     <div class="modal">
       <div class="modal-header">
         <div>
-          <div class="label" style="margin-bottom:8px;">PRJ-004 · Canyon AeroConnect · Internship</div>
+          <div class="label" style="margin-bottom:8px;">PRJ-005 · Canyon AeroConnect · Internship</div>
           <h2 class="modal-title">Avionics Hardware Validation &amp; Systems Integration</h2>
         </div>
         <button class="modal-close" onclick="closeModal('modal-avionics')">✕ Close</button>
@@ -1294,6 +1331,126 @@
         <div class="media-grid">
           <div class="media-placeholder wide"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ PLACEHOLDER — Lab / Hardware Photo ]</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: RDE Phase II -->
+  <div class="modal-overlay" id="modal-rde">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="label" style="margin-bottom:8px;">PRJ-002 · Phase II · ERAU Propulsion Group · Early Phase</div>
+          <h2 class="modal-title">Rotating Detonation Engine —<br>Phase II Development</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-rde')">✕ Close</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The RDE program is the direct continuation of the Phase I detonation tube work. The detonation tube was built to prove detonation initiation, wave characterization, and model fidelity — providing the experimental and analytical foundation required to design a full annular rotating detonation engine running LOX/kerosene. Phase II is now underway with simulation, injector characterization, and CFD mesh work in parallel.</p>
+
+        <!-- Program lineage callout -->
+        <div style="background:rgba(217,95,26,0.06);border:1px solid rgba(217,95,26,0.25);border-left:3px solid var(--accent);padding:16px 20px;margin:20px 0 28px;border-radius:2px;">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Program Lineage</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text-muted);">
+              <span style="color:var(--green);">✓</span> PRJ-001 — Detonation Tube (Phase I)
+              <span style="font-size:10px;color:var(--text-dim);display:block;margin-top:2px;">Model validated · Test stand complete · Hot fire pending</span>
+            </div>
+            <div style="font-family:var(--mono);font-size:14px;color:var(--border2);">→</div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--text-muted);">
+              <span style="color:var(--accent2);">◉</span> PRJ-002 — Annular RDE (Phase II)
+              <span style="font-size:10px;color:var(--text-dim);display:block;margin-top:2px;">Early-phase · Simulation + injector characterization underway</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section-title">Program Timeline</div>
+        <div class="program-timeline">
+          <div class="tl-item">
+            <div class="tl-dot done"></div>
+            <div class="tl-title">Phase I Complete — Detonation Tube <span class="tl-badge done">Done · PRJ-001</span></div>
+            <div class="tl-sub">Linear detonation tube test stand built and instrumented. Physics-based MATLAB solver validated. Safety board reviews complete. Hot fire pending. Establishes model fidelity and test infrastructure for RDE.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot active"></div>
+            <div class="tl-title">CJ Sizing & Preliminary Chamber Modeling <span class="tl-badge active">Active</span></div>
+            <div class="tl-sub">Chapman-Jouguet detonation cell sizing for LOX/kerosene. Preliminary chamber pressure and heat flux estimates. Annular geometry constraints being defined. Cantera + MATLAB solver being extended from Phase I model.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot active"></div>
+            <div class="tl-title">Heat Transfer Simulation — Framework <span class="tl-badge active">In Progress</span></div>
+            <div class="tl-sub">Simulation code framework initiated. Targeting coupled wall heat flux and chamber thermal environment modeling. Written to feed directly into structural and cooling system design once geometry is locked.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot active"></div>
+            <div class="tl-title">Impinging-Element Injector Characterization <span class="tl-badge active">In Progress</span></div>
+            <div class="tl-sub">Injector trials underway — cold flow spray characterization and dimensional validation of impinging-element injector design. Spray pattern and mass flow distribution data being collected ahead of hot fire integration.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot active"></div>
+            <div class="tl-title">OpenFOAM CFD — Mesh Setup <span class="tl-badge active">In Progress</span></div>
+            <div class="tl-sub">Annular chamber geometry being meshed in OpenFOAM. Reacting flow solver selection underway. C++ used for solver customization and case scripting. Non-reacting validation case planned before full combustion sim.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot pending"></div>
+            <div class="tl-title">Full CFD — Reacting Flow Simulation <span class="tl-badge pending">Upcoming</span></div>
+            <div class="tl-sub">Full annular RDE reacting flow simulation in OpenFOAM. Detonation wave initiation, propagation, and pressure field characterization. Feed into hardware design cycle.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot pending"></div>
+            <div class="tl-title">RDE Hardware Design & Fabrication <span class="tl-badge pending">Upcoming</span></div>
+            <div class="tl-sub">Annular chamber, injector manifold, and cooling architecture. Geometry TBD pending CJ sizing and CFD outputs. LOX/kerosene propellant feed system design.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot pending"></div>
+            <div class="tl-title">Hot-Fire Campaign <span class="tl-badge pending">Upcoming</span></div>
+            <div class="tl-sub">Full RDE hot-fire with DAQ architecture inherited and extended from Phase I detonation tube program. Model validation against live detonation wave and pressure field data.</div>
+          </div>
+        </div>
+
+        <div class="modal-section-title">System Parameters (Preliminary)</div>
+        <table class="spec-table">
+          <tr><td>Configuration</td><td>Annular rotating detonation engine</td></tr>
+          <tr><td>Propellants</td><td>LOX / Kerosene</td></tr>
+          <tr><td>Injector Type</td><td>Impinging element</td></tr>
+          <tr><td>Chamber Geometry</td><td>Annular — sizing TBD (pending CJ analysis)</td></tr>
+          <tr><td>Modeling Tools</td><td>MATLAB, Python, Cantera — extended from Phase I solver</td></tr>
+          <tr><td>CFD Platform</td><td>OpenFOAM · C++ · Reacting flow</td></tr>
+          <tr><td>Current Outputs</td><td>CJ detonation cell sizing, preliminary chamber pressure, early heat flux estimates</td></tr>
+          <tr><td>Program Status</td><td>Early-phase — simulation, injector characterization, and CFD mesh setup in parallel</td></tr>
+          <tr><td>DAQ Strategy</td><td>NI PXI architecture inherited from Phase I — 10 MHz, synchronized multi-channel</td></tr>
+        </table>
+
+        <div class="modal-section-title">Engineering Approach</div>
+        <ul>
+          <li>Phase I (detonation tube) was deliberately scoped to build the exact model fidelity and test infrastructure needed for Phase II — not a standalone project, but a calculated stepping stone.</li>
+          <li>CJ sizing for LOX/kerosene being run through an extended version of the Phase I MATLAB/Cantera solver, allowing direct comparison against validated detonation tube data.</li>
+          <li>Impinging-element injector chosen for LOX/kerosene atomization characteristics. Cold flow spray characterization underway to validate injector geometry ahead of hot fire integration.</li>
+          <li>OpenFOAM selected for CFD due to solver flexibility and C++ customization capability — allows custom reacting flow and detonation wave tracking extensions.</li>
+          <li>Heat transfer simulation framework started early to ensure the thermal modeling pipeline is ready as soon as chamber geometry is locked from CJ and CFD outputs.</li>
+        </ul>
+
+        <div class="modal-section-title">Media</div>
+        <div class="media-grid">
+          <div class="media-placeholder wide">
+            <div class="media-ph-icon">📊</div>
+            <div class="media-ph-label">[ Preliminary CJ Sizing — LOX/Kerosene ]</div>
+          </div>
+          <div class="media-placeholder">
+            <div class="media-ph-icon">📷</div>
+            <div class="media-ph-label">[ Injector — Spray Characterization ]</div>
+          </div>
+          <div class="media-placeholder">
+            <div class="media-ph-icon">🖼</div>
+            <div class="media-ph-label">[ OpenFOAM — Annular Mesh Setup ]</div>
+          </div>
+          <div class="media-placeholder wide">
+            <div class="media-ph-icon">🖼</div>
+            <div class="media-ph-label">[ Annular Chamber Concept Geometry ]</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
