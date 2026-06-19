@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Johaneev Sheelam | Propulsion & Test Engineering</title>
 
-  <!-- Favicon: inline SVG data URI — orange flame/thrust nozzle motif -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0907'/%3E%3Cpolygon points='16,4 22,14 19,14 22,28 10,28 13,14 10,14' fill='%23D95F1A'/%3E%3Cpolygon points='16,10 18.5,17 16,15.5 13.5,17' fill='%23F07030'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -247,7 +246,7 @@
     .section-line { flex: 1; height: 1px; background: var(--border); margin-bottom: 4px; }
 
     /* ═══════════════════════════════════════
-       TARGETING BANNER (new)
+       TARGETING BANNER
     ═══════════════════════════════════════ */
     .targeting-banner {
       background: var(--bg1);
@@ -269,9 +268,7 @@
       white-space: nowrap;
       padding-top: 2px;
     }
-    .targeting-content {
-      flex: 1;
-    }
+    .targeting-content { flex: 1; }
     .targeting-content p {
       font-size: 14px;
       color: var(--text-muted);
@@ -279,11 +276,7 @@
       margin-bottom: 14px;
     }
     .targeting-content p:last-child { margin-bottom: 0; }
-    .targeting-roles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .targeting-roles { display: flex; flex-wrap: wrap; gap: 8px; }
     .role-pill {
       font-family: var(--mono);
       font-size: 10px;
@@ -354,7 +347,7 @@
     .status-text { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
 
     /* ═══════════════════════════════════════
-       TECH STACK SECTION (new)
+       TECH STACK
     ═══════════════════════════════════════ */
     #stack { padding-bottom: 96px; }
     .stack-grid {
@@ -364,10 +357,7 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .stack-category {
-      background: var(--bg1);
-      padding: 28px 28px 32px;
-    }
+    .stack-category { background: var(--bg1); padding: 28px 28px 32px; }
     .stack-cat-label {
       font-family: var(--mono);
       font-size: 9px;
@@ -379,43 +369,17 @@
       align-items: center;
       gap: 8px;
     }
-    .stack-cat-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border2);
-    }
+    .stack-cat-label::after { content: ''; flex: 1; height: 1px; background: var(--border2); }
     .stack-items { display: flex; flex-direction: column; gap: 10px; }
-    .stack-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .stack-item-name {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--text);
-      letter-spacing: 0.04em;
-      flex: 1;
-    }
-    .stack-bar-wrap {
-      width: 64px;
-      height: 3px;
-      background: var(--border2);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    .stack-bar {
-      height: 100%;
-      background: var(--accent);
-      border-radius: 2px;
-      transition: width 1s ease;
-    }
+    .stack-item { display: flex; align-items: center; gap: 10px; }
+    .stack-item-name { font-family: var(--mono); font-size: 12px; color: var(--text); letter-spacing: 0.04em; flex: 1; }
+    .stack-bar-wrap { width: 64px; height: 3px; background: var(--border2); border-radius: 2px; overflow: hidden; }
+    .stack-bar { height: 100%; background: var(--accent); border-radius: 2px; }
     .stack-bar.green { background: var(--green); }
     .stack-bar.blue  { background: var(--blue); }
 
     /* ═══════════════════════════════════════
-       DETONATION PROGRAM TIMELINE (new, in modal)
+       PROGRAM TIMELINE
     ═══════════════════════════════════════ */
     .program-timeline {
       position: relative;
@@ -425,58 +389,35 @@
     .program-timeline::before {
       content: '';
       position: absolute;
-      left: 7px;
-      top: 8px;
-      bottom: 8px;
+      left: 7px; top: 8px; bottom: 8px;
       width: 1px;
       background: var(--border2);
     }
-    .tl-item {
-      position: relative;
-      margin-bottom: 20px;
-      padding-left: 20px;
-    }
+    .tl-item { position: relative; margin-bottom: 20px; padding-left: 20px; }
     .tl-item:last-child { margin-bottom: 0; }
     .tl-dot {
       position: absolute;
-      left: -17px;
-      top: 6px;
+      left: -17px; top: 6px;
       width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--border2);
       border: 1px solid var(--border2);
     }
-    .tl-dot.done { background: var(--green); border-color: var(--green); box-shadow: 0 0 6px var(--green); }
+    .tl-dot.done   { background: var(--green); border-color: var(--green); box-shadow: 0 0 6px var(--green); }
     .tl-dot.active { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 6px var(--accent); animation: pulse 2s ease-in-out infinite; }
-    .tl-dot.pending { background: var(--bg2); border-color: var(--border2); }
-    .tl-title {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--text);
-      letter-spacing: 0.06em;
-      line-height: 1.3;
-    }
-    .tl-sub {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      margin-top: 3px;
-    }
+    .tl-dot.pending{ background: var(--bg2); border-color: var(--border2); }
+    .tl-title { font-family: var(--mono); font-size: 12px; color: var(--text); letter-spacing: 0.06em; line-height: 1.3; }
+    .tl-sub   { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.08em; margin-top: 3px; }
     .tl-badge {
       display: inline-block;
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 2px;
-      margin-left: 8px;
-      vertical-align: middle;
+      font-family: var(--mono); font-size: 9px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 2px 7px; border-radius: 2px;
+      margin-left: 8px; vertical-align: middle;
     }
-    .tl-badge.done { background: rgba(79,168,130,0.12); color: var(--green); border: 1px solid rgba(79,168,130,0.3); }
-    .tl-badge.active { background: rgba(217,95,26,0.12); color: var(--accent2); border: 1px solid rgba(217,95,26,0.3); }
-    .tl-badge.pending { background: rgba(74,69,64,0.2); color: var(--text-muted); border: 1px solid var(--border2); }
+    .tl-badge.done    { background: rgba(79,168,130,0.12); color: var(--green);  border: 1px solid rgba(79,168,130,0.3); }
+    .tl-badge.active  { background: rgba(217,95,26,0.12);  color: var(--accent2);border: 1px solid rgba(217,95,26,0.3); }
+    .tl-badge.pending { background: rgba(74,69,64,0.2);    color: var(--text-muted); border: 1px solid var(--border2); }
 
     /* ═══════════════════════════════════════
        RESEARCH SECTION
@@ -495,22 +436,21 @@
     .research-idx { font-family: var(--mono); font-size: 11px; color: var(--accent); padding-top: 2px; white-space: nowrap; }
     .research-content { flex: 1; }
     .research-title { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.4; }
-    .research-meta { font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.06em; }
+    .research-meta { font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.06em; line-height: 1.6; }
+    .research-meta a { color: var(--accent2); transition: opacity 0.2s; }
+    .research-meta a:hover { opacity: 0.75; }
     .research-status {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 2px;
-      white-space: nowrap;
-      align-self: center;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 2px;
+      white-space: nowrap; align-self: center;
     }
-    .research-status.in-progress { background: rgba(79, 168, 130, 0.1); color: var(--green); border: 1px solid rgba(79, 168, 130, 0.3); }
-    .research-status.placeholder { background: rgba(122, 111, 102, 0.1); color: var(--text-muted); border: 1px solid var(--border2); }
+    .research-status.published   { background: rgba(79,168,130,0.10); color: var(--green); border: 1px solid rgba(79,168,130,0.30); }
+    .research-status.in-progress { background: rgba(79,168,130,0.10); color: var(--green); border: 1px solid rgba(79,168,130,0.30); }
+    .research-status.placeholder { background: rgba(122,111,102,0.10); color: var(--text-muted); border: 1px solid var(--border2); }
 
     /* ═══════════════════════════════════════
-       COURSEWORK SECTION (new)
+       COURSEWORK
     ═══════════════════════════════════════ */
     #coursework { padding-bottom: 96px; }
     .coursework-grid {
@@ -520,48 +460,28 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .cw-track {
-      background: var(--bg1);
-      padding: 28px 28px 32px;
-    }
+    .cw-track { background: var(--bg1); padding: 28px 28px 32px; }
     .cw-track-label {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border2);
+      font-family: var(--mono); font-size: 9px;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 18px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border2);
     }
     .cw-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     .cw-list li {
-      font-size: 13px;
-      color: var(--text-muted);
-      padding-left: 14px;
-      position: relative;
-      line-height: 1.4;
+      font-size: 13px; color: var(--text-muted);
+      padding-left: 14px; position: relative; line-height: 1.4;
     }
-    .cw-list li::before {
-      content: '·';
-      position: absolute;
-      left: 0;
-      color: var(--accent2);
-      font-family: var(--mono);
-    }
+    .cw-list li::before { content: '·'; position: absolute; left: 0; color: var(--accent2); font-family: var(--mono); }
     .cw-list li.highlight { color: var(--text); font-weight: 500; }
 
     /* ═══════════════════════════════════════
-       RESUME SECTION
+       RESUME
     ═══════════════════════════════════════ */
     #resume { padding-bottom: 96px; }
     .resume-block {
-      background: var(--bg1);
-      border: 1px solid var(--border);
-      padding: 48px;
-      display: flex;
-      gap: 64px;
-      align-items: flex-start;
+      background: var(--bg1); border: 1px solid var(--border);
+      padding: 48px; display: flex; gap: 64px; align-items: flex-start;
     }
     .resume-text h3 { font-family: var(--cond); font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
     .resume-text p { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 440px; }
@@ -569,7 +489,7 @@
     .resume-stat-row { display: flex; gap: 48px; margin-bottom: 28px; flex-wrap: wrap; }
 
     /* ═══════════════════════════════════════
-       CONTACT SECTION
+       CONTACT
     ═══════════════════════════════════════ */
     #contact { padding-bottom: 120px; }
     .contact-block { border: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; }
@@ -586,13 +506,13 @@
        FOOTER
     ═══════════════════════════════════════ */
     footer { border-top: 1px solid var(--border); padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; }
-    footer .left { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
+    footer .left  { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
     footer .right { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; }
 
     /* ═══════════════════════════════════════
        MODAL
     ═══════════════════════════════════════ */
-    .modal-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(7, 5, 4, 0.92); backdrop-filter: blur(4px); overflow-y: auto; }
+    .modal-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(7,5,4,0.92); backdrop-filter: blur(4px); overflow-y: auto; }
     .modal-overlay.open { display: block; }
     .modal { background: var(--bg1); border: 1px solid var(--border2); max-width: 900px; margin: 60px auto 60px; position: relative; }
     .modal-header { padding: 36px 40px 28px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
@@ -616,12 +536,90 @@
     .modal-body li { font-size: 14px; color: var(--text-muted); padding-left: 18px; position: relative; line-height: 1.6; }
     .modal-body li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); }
 
+    /* Publication citation block */
+    .pub-citation-block {
+      background: rgba(217,95,26,0.05);
+      border: 1px solid rgba(217,95,26,0.22);
+      border-left: 3px solid var(--accent);
+      padding: 22px 26px;
+      margin: 4px 0 28px;
+      border-radius: 2px;
+    }
+    .pub-citation-header {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 8px; margin-bottom: 14px;
+    }
+    .pub-citation-label {
+      font-family: var(--mono); font-size: 9px;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+    .pub-published-badge {
+      background: rgba(79,168,130,0.12); color: var(--green);
+      border: 1px solid rgba(79,168,130,0.30);
+      font-family: var(--mono); font-size: 9px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 2px;
+    }
+    .pub-citation-title {
+      font-family: var(--sans); font-size: 15px; font-weight: 600;
+      color: var(--text); line-height: 1.45; margin-bottom: 8px;
+    }
+    .pub-citation-authors {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--text-muted); margin-bottom: 6px; letter-spacing: 0.04em;
+    }
+    .pub-citation-authors strong { color: var(--text); }
+    .pub-citation-venue {
+      font-family: var(--mono); font-size: 10px;
+      color: var(--text-muted); margin-bottom: 16px; letter-spacing: 0.04em;
+    }
+    .pub-doi-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid rgba(217,95,26,0.30);
+      padding: 7px 14px; border-radius: 2px;
+      background: rgba(217,95,26,0.07);
+      transition: background 0.2s;
+    }
+    .pub-doi-link:hover { background: rgba(217,95,26,0.14); }
+
+    /* Key results callout */
+    .results-callout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 4px 0 28px;
+    }
+    .result-cell {
+      background: var(--bg2);
+      padding: 18px 20px;
+    }
+    .result-val {
+      font-family: var(--cond);
+      font-size: 22px; font-weight: 700;
+      color: var(--text); line-height: 1; margin-bottom: 4px;
+    }
+    .result-val span { color: var(--accent2); font-size: 14px; }
+    .result-label {
+      font-family: var(--mono); font-size: 9px;
+      color: var(--text-muted); letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
     /* ═══════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════ */
     @media (max-width: 960px) {
       .stack-grid { grid-template-columns: repeat(2, 1fr); }
       .coursework-grid { grid-template-columns: repeat(2, 1fr); }
+      .results-callout { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .projects-grid { grid-template-columns: 1fr; }
@@ -634,6 +632,7 @@
       .hero-stats { gap: 28px; }
       .stack-grid { grid-template-columns: 1fr; }
       .coursework-grid { grid-template-columns: 1fr; }
+      .results-callout { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -665,7 +664,7 @@
         Johaneev<br>
         <span class="line2">Sheelam</span>
       </h1>
-      <p class="hero-sub">B.S. Mechanical Engineering (Propulsion) &nbsp;·&nbsp; B.S. Electrical Engineering (Space)</p>
+      <p class="hero-sub">B.S. Aerospace Engineering (Astronautics) &nbsp;·&nbsp; B.S. Electrical Engineering (Space)</p>
       <div class="hero-stats">
         <div>
           <div class="hero-stat-val">4.0<span>/4.0</span></div>
@@ -686,7 +685,7 @@
       </div>
       <div class="hero-ctas">
         <a href="#projects" class="btn btn-primary">View Engineering Archive →</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        <a href="mailto:johaneev.sheelam@gmail.com" class="btn btn-ghost">Contact</a>
       </div>
     </div>
   </section>
@@ -700,7 +699,6 @@
         <div class="section-line"></div>
       </div>
 
-      <!-- TARGETING BANNER -->
       <div class="targeting-banner">
         <div class="targeting-label">Seeking · Summer 2027</div>
         <div class="targeting-content">
@@ -718,14 +716,16 @@
 
       <div class="projects-grid">
 
-        <!-- PRJ-001: Detonation Tube Phase I (full width) -->
+        <!-- PRJ-001 -->
         <div class="project-card featured" onclick="openModal('modal-det')">
-          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
             <div class="card-num">PRJ-001 · FEATURED</div>
             <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;background:rgba(217,95,26,0.07);">Phase I of II · RDE Program</div>
+            <!-- PUBLISHED BADGE -->
+            <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid rgba(79,168,130,0.35);color:var(--green);border-radius:2px;background:rgba(79,168,130,0.08);">AIAA Published</div>
           </div>
           <h3 class="card-title">Detonation Tube Program<br><span style="color:var(--text-muted);font-size:0.68em;letter-spacing:0.04em;font-weight:600;">Rotating Detonation Engine — Phase I</span></h3>
-          <p class="card-desc">End-to-end design, instrumentation, and test campaign for a linear detonation tube — the deliberate precursor to a full annular LOX/kerosene RDE. Built to validate a physics-based detonation model and prove out test infrastructure before committing to RDE hardware. Every subsystem — DAQ, ignition, cooling, safety architecture — carries forward directly into Phase II.</p>
+          <p class="card-desc">End-to-end design, instrumentation, and test campaign for a linear detonation tube — the deliberate precursor to a full annular LOX/kerosene RDE. Validates a physics-based HLLC detonation solver and proves test infrastructure ahead of RDE hardware commitment. Numerical framework published in AIAA proceedings as first author.</p>
           <div class="card-tags">
             <span class="tag orange">Propulsion</span>
             <span class="tag orange">Test Stand</span>
@@ -733,7 +733,8 @@
             <span class="tag">NI PXI DAQ</span>
             <span class="tag">Compressible Flow</span>
             <span class="tag">LabVIEW</span>
-            <span class="tag">CFD · ANSYS</span>
+            <span class="tag">CFD · ANSYS CFX</span>
+            <span class="tag green">AIAA 2026-108393</span>
           </div>
           <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:auto;">
             <div class="card-status">
@@ -745,20 +746,20 @@
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- Phase connector bar -->
+        <!-- Phase connector -->
         <div style="grid-column:span 2;background:var(--bg);border-left:1px solid var(--border);border-right:1px solid var(--border);height:26px;display:flex;align-items:center;justify-content:center;position:relative;">
           <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--accent);opacity:0.35;"></div>
           <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);background:var(--bg);padding:0 16px;position:relative;z-index:1;">RDE Development Program · Phase I → Phase II</span>
         </div>
 
-        <!-- PRJ-002: RDE Phase II (full width, directly below PRJ-001) -->
+        <!-- PRJ-002 -->
         <div class="project-card featured" onclick="openModal('modal-rde')" style="border-top:2px solid var(--accent);">
-          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
             <div class="card-num">PRJ-002 · ACTIVE</div>
             <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;background:rgba(217,95,26,0.07);">Phase II · Continues from PRJ-001</div>
           </div>
           <h3 class="card-title">Rotating Detonation Engine —<br><span style="color:var(--accent2);">Phase II Development</span></h3>
-          <p class="card-desc">Annular LOX/kerosene RDE program — the direct continuation of the detonation tube work. CJ detonation cell sizing, preliminary chamber pressure and heat flux modeling, impinging-element injector cold-flow characterization, and OpenFOAM mesh setup all running in parallel. Full DAQ and test architecture inherited from Phase I.</p>
+          <p class="card-desc">Annular LOX/kerosene RDE program — direct continuation of the detonation tube work. CJ detonation cell sizing, preliminary chamber pressure and heat flux modeling, impinging-element injector cold-flow characterization, and OpenFOAM mesh setup all running in parallel. Full DAQ and test architecture inherited from Phase I.</p>
           <div class="card-tags">
             <span class="tag orange">RDE · LOX / Kerosene</span>
             <span class="tag orange">Annular</span>
@@ -766,7 +767,6 @@
             <span class="tag">Cantera</span>
             <span class="tag">Impinging Injector</span>
             <span class="tag">Heat Transfer Sim</span>
-            <span class="tag">CFD</span>
           </div>
           <div class="card-status">
             <div class="status-dot"></div>
@@ -775,11 +775,11 @@
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- PRJ-003: DAQ -->
+        <!-- PRJ-003 -->
         <div class="project-card" onclick="openModal('modal-daq')">
           <div class="card-num">PRJ-003</div>
           <h3 class="card-title">DAQ & Instrumentation Architecture</h3>
-          <p class="card-desc">High-speed data acquisition and telemetry system for reactive propulsion test environments. NI PXI at 10 MHz, live signal processing, EMI mitigation, and post-processing pipeline. Architecture shared and inherited across both RDE program phases.</p>
+          <p class="card-desc">High-speed data acquisition and telemetry for reactive propulsion test environments. NI PXI at 10 MHz, live signal processing, EMI mitigation, and post-processing pipeline. Architecture inherited across both RDE program phases.</p>
           <div class="card-tags">
             <span class="tag">NI PXI</span>
             <span class="tag">LabVIEW</span>
@@ -789,11 +789,11 @@
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- PRJ-004: UAV -->
+        <!-- PRJ-004 -->
         <div class="project-card" onclick="openModal('modal-uav')">
           <div class="card-num">PRJ-004</div>
           <h3 class="card-title">Agricultural UAV Platform Development</h3>
-          <p class="card-desc">Founded and operated an independent engineering venture delivering four generations of agricultural UAV platforms — 15–20 operational units across real-world field deployments. Full lifecycle ownership from aerodynamic design through field ops.</p>
+          <p class="card-desc">Founded and operated an independent engineering venture — four generations of agricultural UAV platforms, 15–20 operational units deployed. Full lifecycle ownership from aerodynamic design through field ops.</p>
           <div class="card-tags">
             <span class="tag">Vehicle Design</span>
             <span class="tag">Flight Test</span>
@@ -807,7 +807,7 @@
           <div class="card-arrow">↗</div>
         </div>
 
-        <!-- PRJ-005: Avionics -->
+        <!-- PRJ-005 -->
         <div class="project-card" onclick="openModal('modal-avionics')">
           <div class="card-num">PRJ-005</div>
           <h3 class="card-title">Avionics Hardware Validation &<br>Systems Integration</h3>
@@ -825,6 +825,7 @@
           <div class="card-arrow">↗</div>
         </div>
 
+      </div>
     </div>
   </section>
 
@@ -836,106 +837,51 @@
         <h2 class="section-title">Technical Stack</h2>
         <div class="section-line"></div>
       </div>
-
       <div class="stack-grid">
-
         <div class="stack-category">
           <div class="stack-cat-label">Simulation & Computation</div>
           <div class="stack-items">
-            <div class="stack-item">
-              <span class="stack-item-name">MATLAB</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:95%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">Python</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:93%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">Cantera</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:85%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">OpenFOAM</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:78%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">C++</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:80%"></div></div>
-            </div>
+            <div class="stack-item"><span class="stack-item-name">MATLAB</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:95%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:93%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">Cantera</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:85%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">OpenFOAM</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:78%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">C++</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:80%"></div></div></div>
           </div>
         </div>
-
         <div class="stack-category">
           <div class="stack-cat-label">CAD & Structural</div>
           <div class="stack-items">
-            <div class="stack-item">
-              <span class="stack-item-name">SOLIDWORKS</span>
-              <div class="stack-bar-wrap"><div class="stack-bar green" style="width:90%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">ANSYS</span>
-              <div class="stack-bar-wrap"><div class="stack-bar green" style="width:82%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">Fusion 360</span>
-              <div class="stack-bar-wrap"><div class="stack-bar green" style="width:80%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">FEM / FVM</span>
-              <div class="stack-bar-wrap"><div class="stack-bar green" style="width:78%"></div></div>
-            </div>
+            <div class="stack-item"><span class="stack-item-name">SOLIDWORKS</span><div class="stack-bar-wrap"><div class="stack-bar green" style="width:90%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">ANSYS CFX</span><div class="stack-bar-wrap"><div class="stack-bar green" style="width:82%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">Fusion 360</span><div class="stack-bar-wrap"><div class="stack-bar green" style="width:80%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">FEM / FVM</span><div class="stack-bar-wrap"><div class="stack-bar green" style="width:78%"></div></div></div>
           </div>
         </div>
-
         <div class="stack-category">
           <div class="stack-cat-label">Instrumentation & Test</div>
           <div class="stack-items">
-            <div class="stack-item">
-              <span class="stack-item-name">NI PXI / DAQ</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:88%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">LabVIEW</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:84%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">Signal Processing</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:82%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">EMI Mitigation</span>
-              <div class="stack-bar-wrap"><div class="stack-bar" style="width:79%"></div></div>
-            </div>
+            <div class="stack-item"><span class="stack-item-name">NI PXI / DAQ</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:88%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">LabVIEW</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:84%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">Signal Processing</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:82%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">EMI Mitigation</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:79%"></div></div></div>
           </div>
         </div>
-
         <div class="stack-category">
           <div class="stack-cat-label">Electronics & Avionics</div>
           <div class="stack-items">
-            <div class="stack-item">
-              <span class="stack-item-name">Altium Designer</span>
-              <div class="stack-bar-wrap"><div class="stack-bar blue" style="width:75%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">LTspice</span>
-              <div class="stack-bar-wrap"><div class="stack-bar blue" style="width:72%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">PCB Validation</span>
-              <div class="stack-bar-wrap"><div class="stack-bar blue" style="width:78%"></div></div>
-            </div>
-            <div class="stack-item">
-              <span class="stack-item-name">Infor PLM</span>
-              <div class="stack-bar-wrap"><div class="stack-bar blue" style="width:65%"></div></div>
-            </div>
+            <div class="stack-item"><span class="stack-item-name">Altium Designer</span><div class="stack-bar-wrap"><div class="stack-bar blue" style="width:75%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">LTspice</span><div class="stack-bar-wrap"><div class="stack-bar blue" style="width:72%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">PCB Validation</span><div class="stack-bar-wrap"><div class="stack-bar blue" style="width:78%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">Infor PLM</span><div class="stack-bar-wrap"><div class="stack-bar blue" style="width:65%"></div></div></div>
           </div>
         </div>
-
-      </div><!-- /stack-grid -->
+      </div>
     </div>
   </section>
 
-  <!-- RESEARCH -->
+  <!-- ══════════════════════════════════════
+       RESEARCH — UPDATED WITH PUBLICATION
+  ══════════════════════════════════════ -->
   <section id="research">
     <div class="section-wrap">
       <div class="section-header">
@@ -945,30 +891,50 @@
       </div>
 
       <div class="research-list">
+
+        <!-- [01] PUBLISHED -->
         <div class="research-item">
           <div class="research-idx">[01]</div>
           <div class="research-content">
-            <div class="research-title">Numerical Analysis for Precursor Detonation Tube Development</div>
-            <div class="research-meta">AIAA Region II Student Conference &nbsp;·&nbsp; Published & Presented &nbsp;·&nbsp; First & Lead Author · Lead Presenter</div>
+            <div class="research-title">
+              Numerical Analysis and Precursor Detonation Tube Design for Continuously Rotating Detonation Engine Development
+            </div>
+            <div class="research-meta">
+              AIAA Region II Student Conference 2026 &nbsp;·&nbsp;
+              <a href="https://arc.aiaa.org/doi/10.2514/6.2026-108393" target="_blank" rel="noopener">
+                DOI: 10.2514/6.2026-108393 ↗
+              </a>
+              &nbsp;·&nbsp;
+              First &amp; Lead Author · Lead Presenter
+              &nbsp;·&nbsp;
+              Sheelam, J.; Sharma, K.; Mooney, K. C.; Coulter, B. J.
+              &nbsp;·&nbsp;
+              Embry‑Riddle Aeronautical University, Prescott, AZ
+            </div>
           </div>
-          <div class="research-status in-progress">Published</div>
+          <div class="research-status published">Published</div>
         </div>
+
+        <!-- [02] ACCEPTED -->
         <div class="research-item">
           <div class="research-idx">[02]</div>
           <div class="research-content">
             <div class="research-title">Integrated Structural Assessment of Detonation Tube Hardware Under Transient High-Rate Loading</div>
-            <div class="research-meta">IOP Innovations in Applied Mechanics 2026 &nbsp;·&nbsp; Accepted · To Be Published & Presented &nbsp;·&nbsp; First & Lead Author · Lead Presenter</div>
+            <div class="research-meta">IOP Innovations in Applied Mechanics 2026 &nbsp;·&nbsp; Accepted · To Be Published &amp; Presented &nbsp;·&nbsp; First &amp; Lead Author · Lead Presenter</div>
           </div>
           <div class="research-status in-progress">Accepted</div>
         </div>
+
+        <!-- [03] UPCOMING -->
         <div class="research-item">
           <div class="research-idx">[03]</div>
           <div class="research-content">
             <div class="research-title">Acta Astronautica Submission</div>
-            <div class="research-meta">Acta Astronautica &nbsp;·&nbsp; Upcoming / In Preparation &nbsp;·&nbsp; First & Lead Author</div>
+            <div class="research-meta">Acta Astronautica &nbsp;·&nbsp; In Preparation &nbsp;·&nbsp; First &amp; Lead Author</div>
           </div>
           <div class="research-status placeholder">Upcoming</div>
         </div>
+
       </div>
     </div>
   </section>
@@ -981,9 +947,7 @@
         <h2 class="section-title">Relevant Coursework</h2>
         <div class="section-line"></div>
       </div>
-
       <div class="coursework-grid">
-
         <div class="cw-track">
           <div class="cw-track-label">Propulsion & Fluids</div>
           <ul class="cw-list">
@@ -996,7 +960,6 @@
             <li>Combustion & Reacting Flows</li>
           </ul>
         </div>
-
         <div class="cw-track">
           <div class="cw-track-label">Structures & Mechanics</div>
           <ul class="cw-list">
@@ -1009,7 +972,6 @@
             <li>Vibrations & Structural Dynamics</li>
           </ul>
         </div>
-
         <div class="cw-track">
           <div class="cw-track-label">EE, Controls & Systems</div>
           <ul class="cw-list">
@@ -1022,7 +984,6 @@
             <li>Engineering Mathematics (ODEs, PDEs, Linear Algebra)</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -1044,7 +1005,7 @@
             </div>
             <div>
               <div class="hero-stat-val" style="font-size:28px;">Dual B.S.</div>
-              <div class="hero-stat-desc">Mechanical Eng. (Propulsion) + EE (Space)</div>
+              <div class="hero-stat-desc">Aero. Eng. (Astronautics) + EE (Space)</div>
             </div>
             <div>
               <div class="hero-stat-val" style="font-size:28px;">4.0 GPA</div>
@@ -1052,12 +1013,12 @@
             </div>
           </div>
           <h3>Propulsion-Focused Resume</h3>
-          <p style="margin-top:10px;">Optimized for propulsion test engineering, experimental aerospace testing, high-speed DAQ and instrumentation, reactive/compressible flow, and integrated vehicle systems. Emphasizes detonation research, avionics hardware validation, and end-to-end test campaign ownership from PDR through hot-fire.</p>
+          <p style="margin-top:10px;">Optimized for propulsion test engineering, experimental aerospace testing, high-speed DAQ and instrumentation, reactive/compressible flow, and integrated vehicle systems. Emphasizes detonation research, published AIAA authorship, avionics hardware validation, and end-to-end test campaign ownership from PDR through hot-fire.</p>
         </div>
         <div class="resume-actions">
           <a href="JohaneevSheelam.pdf" class="btn btn-primary" target="_blank">↓ Download Resume (PDF)</a>
           <a href="mailto:johaneev.sheelam@gmail.com" class="btn btn-ghost">Request Systems Resume</a>
-          <p style="font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px;">Systems-focused version available on request</p>
+          <p style="font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">Systems-focused version available on request</p>
         </div>
       </div>
     </div>
@@ -1073,7 +1034,7 @@
       </div>
       <div class="contact-block">
         <div class="contact-left">
-          <h3>Get In Touch!</h3>
+          <h3>Get In Touch</h3>
           <p>Targeting Summer 2027 propulsion test, hot-fire campaign, and experimental propulsion internships. If your team runs engines, builds test stands, or generates high-rate transient data — that's the environment I want to be in. U.S. citizen. Available to relocate.</p>
         </div>
         <div class="contact-right">
@@ -1102,18 +1063,15 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="left">© 2025 Johaneev Sheelam &nbsp;·&nbsp; Propulsion Systems Engineering</div>
-    <div class="right">ERAU · Prescott, AZ · Dec 2028 &nbsp;·&nbsp; Updated May 2026</div>
+    <div class="left">© 2026 Johaneev Sheelam &nbsp;·&nbsp; Propulsion Systems Engineering</div>
+    <div class="right">ERAU · Prescott, AZ · Dec 2028 &nbsp;·&nbsp; Updated June 2026</div>
   </footer>
 
 
-  <!-- ═══════════════════════════════════════
-       MODALS
-  ═══════════════════════════════════════ -->
-
-  <!-- MODAL: Detonation Program -->
+  <!-- ══════════════════════════════════════
+       MODAL: DETONATION PROGRAM (UPDATED)
+  ══════════════════════════════════════ -->
   <div class="modal-overlay" id="modal-det">
     <div class="modal">
       <div class="modal-header">
@@ -1125,74 +1083,138 @@
       </div>
       <div class="modal-body">
 
-        <p>Phase-one development of a linear detonation tube test platform — a stepping stone toward full RDE implementation — designed to experimentally validate a physics-based detonation model developed in-house. The program covers propulsion design, structural analysis, instrumentation, test stand construction, safety system architecture, and operational procedures from PDR through hot-fire.</p>
+        <p>Phase-one development of a linear detonation tube test platform — a calculated stepping stone toward full RDE implementation — designed to experimentally validate a physics-based detonation model developed in-house. The program covers propulsion design, structural analysis, instrumentation, test stand construction, safety system architecture, and operational procedures from PDR through hot-fire. The numerical analysis phase is complete and published in AIAA proceedings.</p>
 
+        <!-- ── PUBLISHED PAPER CALLOUT ───────────── -->
+        <div class="modal-section-title">AIAA Publication</div>
+
+        <div class="pub-citation-block">
+          <div class="pub-citation-header">
+            <div class="pub-citation-label">AIAA Conference Paper · First &amp; Lead Author</div>
+            <div class="pub-published-badge">Published</div>
+          </div>
+          <div class="pub-citation-title">
+            Numerical Analysis and Precursor Detonation Tube Design for Continuously Rotating Detonation Engine Development
+          </div>
+          <div class="pub-citation-authors">
+            <strong>Sheelam, J.</strong>; Sharma, K.; Mooney, K. C.; Coulter, B. J.
+          </div>
+          <div class="pub-citation-venue">
+            AIAA Region II Student Conference 2026 &nbsp;·&nbsp; Embry-Riddle Aeronautical University, Prescott, AZ
+          </div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.65;margin:10px 0 16px;">
+            Presents a coupled HLLC–Cantera–Lamé numerical framework that captures detonation-scale wave propagation within 2–3% of CJ predictions and confirms structural feasibility of the proposed hardware geometry — providing quantitative justification for fabrication and staged hot-fire testing.
+          </div>
+          <a href="https://arc.aiaa.org/doi/10.2514/6.2026-108393" target="_blank" rel="noopener" class="pub-doi-link">
+            View on AIAA ARC &nbsp;↗ &nbsp;·&nbsp; DOI: 10.2514/6.2026-108393
+          </a>
+        </div>
+
+        <!-- ── KEY RESULTS FROM PAPER ─────────────── -->
+        <div class="modal-section-title">Key Published Results</div>
+
+        <div class="results-callout">
+          <div class="result-cell">
+            <div class="result-val">4,358 <span>m/s</span></div>
+            <div class="result-label">Detonation wave speed — within 2–3% of CJ prediction</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">33.8 <span>MPa</span></div>
+            <div class="result-label">Peak simulated pressure at t = 0.163 ms</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">4,923 <span>K</span></div>
+            <div class="result-label">Peak wave temperature</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">59.8 <span>MPa</span></div>
+            <div class="result-label">Max von Mises stress — 25% of yield limit (SS 304)</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">0 <span>events</span></div>
+            <div class="result-label">Structural violations — no yield, no UTS exceedance</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">&lt;14 <span>% Δ</span></div>
+            <div class="result-label">ANSYS CFX vs. MATLAB solver agreement</div>
+          </div>
+        </div>
+
+        <p>The coupled Euler–finite-rate chemistry framework captured detonation-scale wave propagation within 2–3% of classical CJ velocity predictions. ANSYS CFX 3D simulations corroborated the reduced-order MATLAB solver's pressure-rise trends to within 14% after ignition kernel repositioning. Structural screening confirmed 17-4PH steel geometry supports the detonation environment with significant margin — providing quantitative justification for hardware fabrication and staged experimental testing.</p>
+
+        <!-- ── PROGRAM TIMELINE ───────────────────── -->
         <div class="modal-section-title">Program Timeline</div>
         <div class="program-timeline">
           <div class="tl-item">
             <div class="tl-dot done"></div>
             <div class="tl-title">Physics-Based Numerical Model <span class="tl-badge done">Complete</span></div>
-            <div class="tl-sub">MATLAB solver — CJ conditions, detonation wave propagation, compressible flow, transient thermal loading. Validated against published detonation data.</div>
+            <div class="tl-sub">MATLAB 1D HLLC solver with Cantera finite-rate chemistry (GRI-Mech 3.0). CJ conditions, detonation wave propagation, compressible flow, transient thermal and structural loading. Wave speed within 2–3% of CJ theory.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot done"></div>
-            <div class="tl-title">Structural Assessment & FEA <span class="tl-badge done">Complete</span></div>
-            <div class="tl-sub">Transient high-rate loading analysis. 17-4 PH SS H1100 material selection validated against 115–117 MPa Chapman-Jouguet detonation pressures. Published IOP 2026.</div>
+            <div class="tl-title">ANSYS CFX Multidimensional Corroboration <span class="tl-badge done">Complete</span></div>
+            <div class="tl-sub">3D k-ω turbulence modeling for confinement behavior, shear-layer development, and DDT-relevant flow features. Pressure evolution consistent with MATLAB solver to within 14%.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot done"></div>
+            <div class="tl-title">Structural Feasibility — Lamé Analysis <span class="tl-badge done">Complete</span></div>
+            <div class="tl-sub">Transient pressure mapped to inner-wall von Mises stress via thick-cylinder Lamé relations. Max σ_vm = 59.8 MPa against SS 304 Sy = 240 MPa. No structural violations. Published in IOP proceedings.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot done"></div>
+            <div class="tl-title">AIAA Paper — Published <span class="tl-badge done">Published</span></div>
+            <div class="tl-sub">First and lead author. AIAA Region II Student Conference 2026. DOI: 10.2514/6.2026-108393. Full numerical framework documented and peer-reviewed.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot done"></div>
             <div class="tl-title">DAQ & Instrumentation Design <span class="tl-badge done">Complete</span></div>
-            <div class="tl-sub">NI PXI at 10 MHz. Synchronized multi-channel sensor architecture. EMI mitigation across ignition and sensor lines. LabVIEW live acquisition + MATLAB post-processing.</div>
+            <div class="tl-sub">NI PXI at 10 MHz. Synchronized multi-channel sensor architecture. EMI mitigation across ignition and sensor lines. LabVIEW live acquisition + MATLAB post-processing pipeline.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot done"></div>
-            <div class="tl-title">Safety Board Reviews & SOP <span class="tl-badge done">Complete</span></div>
-            <div class="tl-sub">PDR, CoDR, and safety board reviews completed. Full experimental SOP authored. Hardwired abort logic. Burst diaphragm overpressure mitigation. Remote ignition sequence.</div>
+            <div class="tl-title">Safety Architecture &amp; SOP Pipeline <span class="tl-badge done">Complete</span></div>
+            <div class="tl-sub">PDR, CoDR, and safety board reviews completed. Full experimental SOP authored. Remote ignition with pre-ignition purge. Burst-diaphragm overpressure mitigation. EMI-shielded sensor/ignition lines.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot done"></div>
             <div class="tl-title">Test Stand Fabrication <span class="tl-badge done">Complete</span></div>
-            <div class="tl-sub">Full test stand assembly complete. Regenerative cooling, high-pressure ignition, suppressor and wave-capture system for safe post-detonation depressurization.</div>
+            <div class="tl-sub">Full hardware assembly. Regenerative cooling architecture, high-pressure ignition system, suppressor and wave-capture system for safe post-detonation depressurization without vacuum chamber infrastructure.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot active"></div>
             <div class="tl-title">Hot-Fire Campaign <span class="tl-badge active">Pending</span></div>
-            <div class="tl-sub">O₂/C₂H₄ (1:3). Pre-ignition purge, remote initiation, synchronized data capture. Model validation against live pressure trace data.</div>
+            <div class="tl-sub">C₂H₄/O₂ (1:3, φ = 1.2). Pre-ignition purge, remote initiation, 10 MHz synchronized data capture. Model validation against live pressure trace. Directly extends the published numerical framework.</div>
           </div>
         </div>
 
+        <!-- ── SYSTEM SPECS ───────────────────────── -->
         <div class="modal-section-title">System Specifications</div>
         <table class="spec-table">
-          <tr><td>Oxidizer / Fuel</td><td>Oxygen / Ethylene &nbsp;(1:3 ratio)</td></tr>
-          <tr><td>Peak Pressure (DAF)</td><td>115 – 117 MPa</td></tr>
+          <tr><td>Oxidizer / Fuel</td><td>Oxygen / Ethylene &nbsp;(φ = 1.2, 1:3 ratio)</td></tr>
+          <tr><td>Initial Pressure</td><td>1,114,575 Pa (~11 atm) · enables high-pressure detonation environment</td></tr>
+          <tr><td>Peak Pressure (DAF)</td><td>115–117 MPa structural design target</td></tr>
+          <tr><td>Simulated Peak Pressure</td><td>33.775 MPa at t = 0.163 ms, x = 1.75 ft</td></tr>
+          <tr><td>Detonation Wave Speed</td><td>4,357.7 m/s (numerical) vs. 4,300–4,500 m/s CJ band — 2–3% deviation</td></tr>
           <tr><td>Primary Material</td><td>17-4 PH Stainless Steel, H1100 Heat Treatment</td></tr>
-          <tr><td>DAQ System</td><td>National Instruments PXI &nbsp;·&nbsp; 10 MHz acquisition</td></tr>
+          <tr><td>DAQ System</td><td>National Instruments PXI · 10 MHz acquisition</td></tr>
           <tr><td>Software Stack</td><td>LabVIEW (acquisition) → MATLAB (post-processing &amp; solver)</td></tr>
-          <tr><td>Computational Tools</td><td>MATLAB, Python, Cantera, ANSYS, SOLIDWORKS, Fusion 360</td></tr>
-          <tr><td>CFD Solver Type</td><td>HLLC scheme · transient conduction · shock tracking · structural coupling</td></tr>
-          <tr><td>Program Status</td><td>Pre-hot fire — test stand complete, hot fire pending</td></tr>
-          <tr><td>Subsystems Owned</td><td>Propulsion test architecture, ignition, purge, wave-suppression, cooling, instrumentation, DAQ, telemetry, safety documentation</td></tr>
+          <tr><td>Computational Tools</td><td>MATLAB, Python, Cantera (GRI-Mech 3.0), ANSYS CFX, SOLIDWORKS, Fusion 360</td></tr>
+          <tr><td>CFD Solver Type</td><td>HLLC finite-volume · operator-split chemistry · k-ω turbulence (CFX) · thick-cylinder Lamé structural</td></tr>
+          <tr><td>Program Status</td><td>Pre-hot fire — test stand complete · numerical framework published</td></tr>
         </table>
 
+        <!-- ── ENGINEERING NOTES ──────────────────── -->
         <div class="modal-section-title">Engineering Approach</div>
         <ul>
-          <li>Led test stand design as primary decision-maker, with a team of supporting engineers. Own all hardware design decisions across mechanical, electrical, and propulsion subsystems.</li>
-          <li>Developed a custom MATLAB solver modeling CJ conditions, detonation wave propagation, compressible flow, and transient structural loading — used to guide hardware design before fabrication.</li>
-          <li>Designed regenerative cooling architecture and high-pressure ignition system. Engineered a suppressor and wave-capture system for post-detonation safe depressurization without vacuum chamber infrastructure.</li>
-          <li>Full operational pipeline: PDR, CoDR, safety board reviews, formal experimental SOP — engineering lifecycle from concept through readiness.</li>
-          <li>Telemetry: live acquisition with post-processing averaging; NI PXI at 10 MHz with synchronized sensor channels.</li>
+          <li>Led test stand design as primary decision-maker — owned all hardware decisions across mechanical, electrical, and propulsion subsystems. Team of four engineers with supporting roles.</li>
+          <li>Developed the custom MATLAB 1D HLLC solver from scratch: CJ/ZND theory, Euler equations, operator-split Cantera chemistry, shock/detonation front tracking, and Lamé structural screening — all integrated into a single coupled framework. Published.</li>
+          <li>ANSYS CFX used for 3D multidimensional corroboration: k-ω turbulence, shear-layer development, and confinement behavior not resolvable in 1D. Identified and resolved secondary wave interference via ignition kernel repositioning.</li>
+          <li>Designed regenerative cooling architecture, high-pressure ignition system, and suppressor/wave-capture system for post-detonation safe depressurization — no vacuum chamber infrastructure.</li>
+          <li>Full operational pipeline: PDR, CoDR, safety board reviews, formal experimental SOP authored for every stage of the test campaign.</li>
         </ul>
 
-        <div class="modal-section-title">Safety & Operational Architecture</div>
-        <ul>
-          <li>Remote ignition with pre-ignition purge sequence</li>
-          <li>EMI shielding on all critical sensor and ignition lines</li>
-          <li>Burst diaphragm for overpressure event mitigation</li>
-          <li>Full instrumentation — thermocouples, dynamic pressure, structural sensors</li>
-          <li>Hardwired abort logic; no software abort path</li>
-        </ul>
-
-        <div class="modal-section-title">Media — Test Stand & System Architecture</div>
+        <!-- ── MEDIA ──────────────────────────────── -->
+        <div class="modal-section-title">Media — Test Stand &amp; System Architecture</div>
         <div class="media-grid">
           <div class="media-placeholder wide">
             <div class="media-ph-icon">📷</div>
@@ -1220,12 +1242,10 @@
           </div>
         </div>
 
-        <div class="modal-section-title">Publications</div>
-        <p>First and lead author / lead presenter for <em>Numerical Analysis for Precursor Detonation Tube Development</em>, published and presented at the AIAA Region II Student Conference. First and lead author / lead presenter for <em>Integrated Structural Assessment of Detonation Tube Hardware Under Transient High-Rate Loading</em>, accepted for IOP Innovations in Applied Mechanics 2026. Acta Astronautica submission upcoming.</p>
-
       </div>
     </div>
   </div>
+
 
   <!-- MODAL: DAQ -->
   <div class="modal-overlay" id="modal-daq">
@@ -1238,7 +1258,7 @@
         <button class="modal-close" onclick="closeModal('modal-daq')">✕ Close</button>
       </div>
       <div class="modal-body">
-        <p>High-speed data acquisition architecture developed for reactive propulsion test environments, where signal fidelity, synchronization, and EMI immunity are mission-critical. Designed around National Instruments PXI hardware, with LabVIEW acquisition feeding into a MATLAB post-processing and averaging pipeline.</p>
+        <p>High-speed data acquisition architecture for reactive propulsion test environments, where signal fidelity, synchronization, and EMI immunity are mission-critical. Designed around National Instruments PXI hardware, with LabVIEW acquisition feeding into a MATLAB post-processing and averaging pipeline.</p>
         <div class="modal-section-title">System Specifications</div>
         <table class="spec-table">
           <tr><td>Platform</td><td>National Instruments PXI</td></tr>
@@ -1250,8 +1270,8 @@
         <div class="modal-section-title">Architecture &amp; Design Decisions</div>
         <ul>
           <li>Designed sensor routing and channel synchronization for multi-sensor detonation events at high dP/dt transients</li>
-          <li>Implemented EMI shielding architecture across ignition, sensor, and power lines to protect signal integrity during reactive events</li>
-          <li>Developed live telemetry visualization with automated post-processing averaging for pressure trace validation</li>
+          <li>EMI shielding architecture across ignition, sensor, and power lines to protect signal integrity during reactive events</li>
+          <li>Live telemetry visualization with automated post-processing averaging for pressure trace validation</li>
           <li>All sensor channels active — thermocouple, dynamic pressure, and structural instrumentation fully integrated</li>
         </ul>
         <div class="modal-section-title">Media</div>
@@ -1275,7 +1295,7 @@
         <button class="modal-close" onclick="closeModal('modal-uav')">✕ Close</button>
       </div>
       <div class="modal-body">
-        <p>Founded and led Agricultural Unmanned Aerial Systems — an independent engineering operation designing, fabricating, and deploying UAV platforms for agricultural applications. Four generations of platform development resulted in 15–20 operational units fielded in real-world deployments, demonstrating full-lifecycle engineering ownership from first-principles design through sustained operational use.</p>
+        <p>Founded and led Agricultural Unmanned Aerial Systems — an independent engineering operation designing, fabricating, and deploying UAV platforms for agricultural applications. Four generations of platform development, 15–20 operational units fielded in real-world deployments, demonstrating full-lifecycle engineering ownership from first-principles design through sustained operational use.</p>
         <div class="modal-section-title">Platform Summary</div>
         <table class="spec-table">
           <tr><td>Generations Developed</td><td>4</td></tr>
@@ -1316,7 +1336,7 @@
         <p>Electrical engineering internship at Canyon AeroConnect focused on avionics hardware integration, electronics validation, PCB-level debugging, and manufacturing workflows for flight-critical aerospace systems. Work includes schematic review, board bring-up, signal integrity analysis, hardware reliability improvement, and supplier/manufacturing coordination.</p>
         <div class="modal-section-title">Notable Technical Work</div>
         <ul>
-          <li>Redesigned PCB filtered connector architecture to unfiltered connectors with discrete capacitor pre-stage to resolve a component lead-time constraint, while maintaining EMI compliance and impedance matching requirements</li>
+          <li>Redesigned PCB filtered connector architecture to unfiltered connectors with discrete capacitor pre-stage to resolve a component lead-time constraint — maintained EMI compliance and impedance matching throughout</li>
           <li>Schematic review, bring-up testing, and hardware failure debugging across avionics board-level systems</li>
           <li>Generated ECOs, ECRs, EDRs, and Problem Reports while coordinating with suppliers, QA teams, and manufacturing contractors</li>
         </ul>
@@ -1349,13 +1369,12 @@
 
         <p>The RDE program is the direct continuation of the Phase I detonation tube work. The detonation tube was built to prove detonation initiation, wave characterization, and model fidelity — providing the experimental and analytical foundation required to design a full annular rotating detonation engine running LOX/kerosene. Phase II is now underway with simulation, injector characterization, and CFD mesh work in parallel.</p>
 
-        <!-- Program lineage callout -->
         <div style="background:rgba(217,95,26,0.06);border:1px solid rgba(217,95,26,0.25);border-left:3px solid var(--accent);padding:16px 20px;margin:20px 0 28px;border-radius:2px;">
           <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Program Lineage</div>
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
             <div style="font-family:var(--mono);font-size:11px;color:var(--text-muted);">
               <span style="color:var(--green);">✓</span> PRJ-001 — Detonation Tube (Phase I)
-              <span style="font-size:10px;color:var(--text-dim);display:block;margin-top:2px;">Model validated · Test stand complete · Hot fire pending</span>
+              <span style="font-size:10px;color:var(--text-dim);display:block;margin-top:2px;">Published AIAA 2026-108393 · Test stand complete · Hot fire pending</span>
             </div>
             <div style="font-family:var(--mono);font-size:14px;color:var(--border2);">→</div>
             <div style="font-family:var(--mono);font-size:11px;color:var(--text-muted);">
@@ -1369,43 +1388,38 @@
         <div class="program-timeline">
           <div class="tl-item">
             <div class="tl-dot done"></div>
-            <div class="tl-title">Phase I Complete — Detonation Tube <span class="tl-badge done">Done · PRJ-001</span></div>
-            <div class="tl-sub">Linear detonation tube test stand built and instrumented. Physics-based MATLAB solver validated. Safety board reviews complete. Hot fire pending. Establishes model fidelity and test infrastructure for RDE.</div>
+            <div class="tl-title">Phase I Complete — Published <span class="tl-badge done">Done · PRJ-001</span></div>
+            <div class="tl-sub">Detonation tube test stand complete. HLLC solver and ANSYS CFX numerical framework validated and published in AIAA proceedings (DOI: 10.2514/6.2026-108393). Hot fire pending.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot active"></div>
             <div class="tl-title">CJ Sizing & Preliminary Chamber Modeling <span class="tl-badge active">Active</span></div>
-            <div class="tl-sub">Chapman-Jouguet detonation cell sizing for LOX/kerosene. Preliminary chamber pressure and heat flux estimates. Annular geometry constraints being defined. Cantera + MATLAB solver being extended from Phase I model.</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-dot active"></div>
-            <div class="tl-title">Heat Transfer Simulation — Framework <span class="tl-badge active">In Progress</span></div>
-            <div class="tl-sub">Simulation code framework initiated. Targeting coupled wall heat flux and chamber thermal environment modeling. Written to feed directly into structural and cooling system design once geometry is locked.</div>
+            <div class="tl-sub">Chapman-Jouguet detonation cell sizing for LOX/kerosene. Preliminary chamber pressure and heat flux estimates. Annular geometry constraints being defined. MATLAB/Cantera solver extended from published Phase I framework.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot active"></div>
             <div class="tl-title">Impinging-Element Injector Characterization <span class="tl-badge active">In Progress</span></div>
-            <div class="tl-sub">Injector trials underway — cold flow spray characterization and dimensional validation of impinging-element injector design. Spray pattern and mass flow distribution data being collected ahead of hot fire integration.</div>
+            <div class="tl-sub">Cold flow spray characterization and dimensional validation. Spray pattern and mass flow distribution data being collected ahead of hot fire integration.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot active"></div>
             <div class="tl-title">OpenFOAM CFD — Mesh Setup <span class="tl-badge active">In Progress</span></div>
-            <div class="tl-sub">Annular chamber geometry being meshed in OpenFOAM. Reacting flow solver selection underway. C++ used for solver customization and case scripting. Non-reacting validation case planned before full combustion sim.</div>
+            <div class="tl-sub">Annular chamber geometry being meshed in OpenFOAM. Reacting flow solver selection underway. C++ for solver customization. Non-reacting validation case planned before full combustion sim.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot pending"></div>
             <div class="tl-title">Full CFD — Reacting Flow Simulation <span class="tl-badge pending">Upcoming</span></div>
-            <div class="tl-sub">Full annular RDE reacting flow simulation in OpenFOAM. Detonation wave initiation, propagation, and pressure field characterization. Feed into hardware design cycle.</div>
+            <div class="tl-sub">Full annular RDE reacting flow in OpenFOAM. Detonation wave initiation, propagation, pressure field characterization. Feed into hardware design cycle.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot pending"></div>
-            <div class="tl-title">RDE Hardware Design & Fabrication <span class="tl-badge pending">Upcoming</span></div>
-            <div class="tl-sub">Annular chamber, injector manifold, and cooling architecture. Geometry TBD pending CJ sizing and CFD outputs. LOX/kerosene propellant feed system design.</div>
+            <div class="tl-title">RDE Hardware Design &amp; Fabrication <span class="tl-badge pending">Upcoming</span></div>
+            <div class="tl-sub">Annular chamber, injector manifold, cooling architecture. LOX/kerosene propellant feed system design. Geometry TBD pending CJ sizing and CFD outputs.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot pending"></div>
             <div class="tl-title">Hot-Fire Campaign <span class="tl-badge pending">Upcoming</span></div>
-            <div class="tl-sub">Full RDE hot-fire with DAQ architecture inherited and extended from Phase I detonation tube program. Model validation against live detonation wave and pressure field data.</div>
+            <div class="tl-sub">Full RDE hot-fire. DAQ architecture inherited and extended from Phase I. Model validation against live detonation wave and pressure field data.</div>
           </div>
         </div>
 
@@ -1414,41 +1428,17 @@
           <tr><td>Configuration</td><td>Annular rotating detonation engine</td></tr>
           <tr><td>Propellants</td><td>LOX / Kerosene</td></tr>
           <tr><td>Injector Type</td><td>Impinging element</td></tr>
-          <tr><td>Chamber Geometry</td><td>Annular — sizing TBD (pending CJ analysis)</td></tr>
-          <tr><td>Modeling Tools</td><td>MATLAB, Python, Cantera — extended from Phase I solver</td></tr>
+          <tr><td>Modeling Tools</td><td>MATLAB, Python, Cantera — extended from published Phase I solver</td></tr>
           <tr><td>CFD Platform</td><td>OpenFOAM · C++ · Reacting flow</td></tr>
-          <tr><td>Current Outputs</td><td>CJ detonation cell sizing, preliminary chamber pressure, early heat flux estimates</td></tr>
-          <tr><td>Program Status</td><td>Early-phase — simulation, injector characterization, and CFD mesh setup in parallel</td></tr>
           <tr><td>DAQ Strategy</td><td>NI PXI architecture inherited from Phase I — 10 MHz, synchronized multi-channel</td></tr>
         </table>
 
-        <div class="modal-section-title">Engineering Approach</div>
-        <ul>
-          <li>Phase I (detonation tube) was deliberately scoped to build the exact model fidelity and test infrastructure needed for Phase II — not a standalone project, but a calculated stepping stone.</li>
-          <li>CJ sizing for LOX/kerosene being run through an extended version of the Phase I MATLAB/Cantera solver, allowing direct comparison against validated detonation tube data.</li>
-          <li>Impinging-element injector chosen for LOX/kerosene atomization characteristics. Cold flow spray characterization underway to validate injector geometry ahead of hot fire integration.</li>
-          <li>OpenFOAM selected for CFD due to solver flexibility and C++ customization capability — allows custom reacting flow and detonation wave tracking extensions.</li>
-          <li>Heat transfer simulation framework started early to ensure the thermal modeling pipeline is ready as soon as chamber geometry is locked from CJ and CFD outputs.</li>
-        </ul>
-
         <div class="modal-section-title">Media</div>
         <div class="media-grid">
-          <div class="media-placeholder wide">
-            <div class="media-ph-icon">📊</div>
-            <div class="media-ph-label">[ Preliminary CJ Sizing — LOX/Kerosene ]</div>
-          </div>
-          <div class="media-placeholder">
-            <div class="media-ph-icon">📷</div>
-            <div class="media-ph-label">[ Injector — Spray Characterization ]</div>
-          </div>
-          <div class="media-placeholder">
-            <div class="media-ph-icon">🖼</div>
-            <div class="media-ph-label">[ OpenFOAM — Annular Mesh Setup ]</div>
-          </div>
-          <div class="media-placeholder wide">
-            <div class="media-ph-icon">🖼</div>
-            <div class="media-ph-label">[ Annular Chamber Concept Geometry ]</div>
-          </div>
+          <div class="media-placeholder wide"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Preliminary CJ Sizing — LOX/Kerosene ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Injector — Spray Characterization ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ OpenFOAM — Annular Mesh Setup ]</div></div>
+          <div class="media-placeholder wide"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ Annular Chamber Concept Geometry ]</div></div>
         </div>
 
       </div>
