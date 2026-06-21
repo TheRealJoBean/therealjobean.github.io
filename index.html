@@ -526,15 +526,38 @@
     .spec-table td:last-child { color: var(--text); }
     .spec-table tr:last-child td { border-bottom: none; }
     .modal-section-title { font-family: var(--cond); font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent2); margin: 32px 0 14px; }
+    .modal-body p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 14px; }
+    .modal-body ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .modal-body li { font-size: 14px; color: var(--text-muted); padding-left: 18px; position: relative; line-height: 1.6; }
+    .modal-body li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); }
+
+    /* Real image display */
+    .media-real {
+      width: 100%;
+      border: 1px solid var(--border2);
+      border-radius: 2px;
+      display: block;
+      background: var(--bg2);
+    }
+    .media-real-wide {
+      grid-column: span 2;
+    }
+    .media-caption {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* Media grid wrapper */
     .media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0; }
     .media-placeholder { background: var(--bg2); border: 1px dashed var(--border2); border-radius: 2px; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
     .media-placeholder.wide { grid-column: span 2; height: 220px; }
     .media-ph-icon { font-size: 28px; opacity: 0.3; }
     .media-ph-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-dim); }
-    .modal-body p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 14px; }
-    .modal-body ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-    .modal-body li { font-size: 14px; color: var(--text-muted); padding-left: 18px; position: relative; line-height: 1.6; }
-    .modal-body li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); }
 
     /* Publication citation block */
     .pub-citation-block {
@@ -613,6 +636,28 @@
       text-transform: uppercase;
     }
 
+    /* Supplementary screen callout box */
+    .supplementary-box {
+      background: rgba(74,144,196,0.05);
+      border: 1px solid rgba(74,144,196,0.22);
+      border-left: 3px solid var(--blue);
+      padding: 18px 22px;
+      margin: 28px 0;
+      border-radius: 2px;
+    }
+    .supplementary-box-header {
+      font-family: var(--mono); font-size: 9px;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 10px;
+    }
+    .supplementary-box p {
+      font-size: 13px !important;
+      color: var(--text-muted) !important;
+      line-height: 1.65 !important;
+      margin-bottom: 8px !important;
+    }
+    .supplementary-box p:last-child { margin-bottom: 0 !important; }
+
     /* ═══════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════ */
@@ -626,6 +671,7 @@
       .project-card.featured { grid-column: span 1; }
       .media-grid { grid-template-columns: 1fr; }
       .media-placeholder.wide { grid-column: span 1; }
+      .media-real-wide { grid-column: span 1; }
       .contact-block { grid-template-columns: 1fr; }
       .resume-block { flex-direction: column; gap: 32px; }
       .nav-links { display: none; }
@@ -664,6 +710,7 @@
         Johaneev<br>
         <span class="line2">Sheelam</span>
       </h1>
+      <!-- CORRECTED: Mechanical Engineering (Propulsion), Dec 2028 single date -->
       <p class="hero-sub">B.S. Mechanical Engineering (Propulsion) &nbsp;·&nbsp; B.S. Electrical Engineering (Space)</p>
       <div class="hero-stats">
         <div>
@@ -672,7 +719,8 @@
         </div>
         <div>
           <div class="hero-stat-val">115<span>–117 MPa</span></div>
-          <div class="hero-stat-desc">Peak detonation pressure (DAF)</div>
+          <!-- CORRECTED: clarify this is the DAF structural design target, not a measured result -->
+          <div class="hero-stat-desc">Structural design target (DAF=2.0)</div>
         </div>
         <div>
           <div class="hero-stat-val">10<span> MHz</span></div>
@@ -721,11 +769,11 @@
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
             <div class="card-num">PRJ-001 · FEATURED</div>
             <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;background:rgba(217,95,26,0.07);">Phase I of II · RDE Program</div>
-            <!-- PUBLISHED BADGE -->
             <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid rgba(79,168,130,0.35);color:var(--green);border-radius:2px;background:rgba(79,168,130,0.08);">AIAA Published</div>
           </div>
           <h3 class="card-title">Detonation Tube Program<br><span style="color:var(--text-muted);font-size:0.68em;letter-spacing:0.04em;font-weight:600;">Rotating Detonation Engine — Phase I</span></h3>
-          <p class="card-desc">End-to-end design, instrumentation, and test campaign for a linear detonation tube — the deliberate precursor to a full annular LOX/kerosene RDE. Validates a physics-based HLLC detonation solver and proves test infrastructure ahead of RDE hardware commitment. Numerical framework published in AIAA proceedings as first author.</p>
+          <!-- CORRECTED: O2/C2H4, annular ridge geometry (not Schelkin spiral), BlastFOAM added -->
+          <p class="card-desc">End-to-end design, instrumentation, and test campaign for a linear O₂/C₂H₄ detonation tube — the deliberate precursor to a full annular LOX/kerosene RDE. Validates a physics-based HLLC detonation solver and proves test infrastructure ahead of RDE hardware commitment. Annular ridge geometry (cosine profile, 43.8% blockage) characterized via BlastFOAM/OpenFOAM and reduced-order MATLAB surrogate. Numerical framework published in AIAA proceedings as first author.</p>
           <div class="card-tags">
             <span class="tag orange">Propulsion</span>
             <span class="tag orange">Test Stand</span>
@@ -733,7 +781,8 @@
             <span class="tag">NI PXI DAQ</span>
             <span class="tag">Compressible Flow</span>
             <span class="tag">LabVIEW</span>
-            <span class="tag">CFD · ANSYS CFX</span>
+            <span class="tag">BlastFOAM / OpenFOAM</span>
+            <span class="tag">ANSYS CFX</span>
             <span class="tag green">AIAA 2026-108393</span>
           </div>
           <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:auto;">
@@ -759,6 +808,7 @@
             <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--accent);color:var(--accent2);border-radius:2px;background:rgba(217,95,26,0.07);">Phase II · Continues from PRJ-001</div>
           </div>
           <h3 class="card-title">Rotating Detonation Engine —<br><span style="color:var(--accent2);">Phase II Development</span></h3>
+          <!-- LOX/Kerosene confirmed correct for Phase II -->
           <p class="card-desc">Annular LOX/kerosene RDE program — direct continuation of the detonation tube work. CJ detonation cell sizing, preliminary chamber pressure and heat flux modeling, impinging-element injector cold-flow characterization, and OpenFOAM mesh setup all running in parallel. Full DAQ and test architecture inherited from Phase I.</p>
           <div class="card-tags">
             <span class="tag orange">RDE · LOX / Kerosene</span>
@@ -811,7 +861,7 @@
         <div class="project-card" onclick="openModal('modal-avionics')">
           <div class="card-num">PRJ-005</div>
           <h3 class="card-title">Avionics Hardware Validation &<br>Systems Integration</h3>
-          <p class="card-desc">Hardware-level validation, PCB bring-up, EMI/impedance constraint work, and schematic review in a defense-adjacent avionics environment under Canyon AeroConnect.</p>
+          <p class="card-desc">Hardware-level validation, PCB bring-up, EMI/impedance constraint work, schematic review, and design-to-manufacturing release in a defense-adjacent avionics environment under Canyon AeroConnect.</p>
           <div class="card-tags">
             <span class="tag">Avionics</span>
             <span class="tag">PCB</span>
@@ -844,7 +894,9 @@
             <div class="stack-item"><span class="stack-item-name">MATLAB</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:95%"></div></div></div>
             <div class="stack-item"><span class="stack-item-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:93%"></div></div></div>
             <div class="stack-item"><span class="stack-item-name">Cantera</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:85%"></div></div></div>
-            <div class="stack-item"><span class="stack-item-name">OpenFOAM</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:78%"></div></div></div>
+            <!-- CORRECTED: BlastFOAM added as distinct Phase I tool, OpenFOAM for Phase II -->
+            <div class="stack-item"><span class="stack-item-name">BlastFOAM</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:80%"></div></div></div>
+            <div class="stack-item"><span class="stack-item-name">OpenFOAM</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:75%"></div></div></div>
             <div class="stack-item"><span class="stack-item-name">C++</span><div class="stack-bar-wrap"><div class="stack-bar" style="width:80%"></div></div></div>
           </div>
         </div>
@@ -879,9 +931,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       RESEARCH — UPDATED WITH PUBLICATION
-  ══════════════════════════════════════ -->
+  <!-- RESEARCH -->
   <section id="research">
     <div class="section-wrap">
       <div class="section-header">
@@ -1005,7 +1055,8 @@
             </div>
             <div>
               <div class="hero-stat-val" style="font-size:28px;">Dual B.S.</div>
-              <div class="hero-stat-desc">Aero. Eng. (Astronautics) + EE (Space)</div>
+              <!-- CORRECTED: Mech. Eng. (Propulsion) + EE (Space) -->
+              <div class="hero-stat-desc">Mech. Eng. (Propulsion) + EE (Space)</div>
             </div>
             <div>
               <div class="hero-stat-val" style="font-size:28px;">4.0 GPA</div>
@@ -1070,7 +1121,16 @@
 
 
   <!-- ══════════════════════════════════════
-       MODAL: DETONATION PROGRAM (UPDATED)
+       MODAL: DETONATION PROGRAM (PRJ-001)
+       ALL CORRECTIONS APPLIED:
+       - O2/C2H4 propellants
+       - annular ridge geometry (no Schelkin spiral)
+       - BlastFOAM Phase I corroboration as complete step
+       - Hot-fire Aug 2026
+       - Real images embedded (4 MATLAB plots)
+       - Supplementary MATLAB re-screen (corrected speeds, H1150, ~3 MPa)
+         clearly separated from published AIAA numbers
+       - 17-4 PH H1150 (corrected from H1100)
   ══════════════════════════════════════ -->
   <div class="modal-overlay" id="modal-det">
     <div class="modal">
@@ -1083,7 +1143,7 @@
       </div>
       <div class="modal-body">
 
-        <p>Phase-one development of a linear detonation tube test platform — a calculated stepping stone toward full RDE implementation — designed to experimentally validate a physics-based detonation model developed in-house. The program covers propulsion design, structural analysis, instrumentation, test stand construction, safety system architecture, and operational procedures from PDR through hot-fire. The numerical analysis phase is complete and published in AIAA proceedings.</p>
+        <p>Phase-one development of a linear O₂/C₂H₄ detonation tube test platform — a calculated stepping stone toward full RDE implementation — designed to experimentally validate a physics-based detonation model developed in-house. The program covers propulsion design, structural analysis, instrumentation, test stand construction, safety system architecture, and operational procedures from PDR through hot-fire. Annular ridge geometry (cosine profile, 43.8% blockage ratio, 10 ridges) drives deflagration-to-detonation transition. The numerical analysis phase is complete and published in AIAA proceedings.</p>
 
         <!-- ── PUBLISHED PAPER CALLOUT ───────────── -->
         <div class="modal-section-title">AIAA Publication</div>
@@ -1140,7 +1200,7 @@
           </div>
         </div>
 
-        <p>The coupled Euler–finite-rate chemistry framework captured detonation-scale wave propagation within 2–3% of classical CJ velocity predictions. ANSYS CFX 3D simulations corroborated the reduced-order MATLAB solver's pressure-rise trends to within 14% after ignition kernel repositioning. Structural screening confirmed 17-4PH steel geometry supports the detonation environment with significant margin — providing quantitative justification for hardware fabrication and staged experimental testing.</p>
+        <p>The coupled Euler–finite-rate chemistry framework captured detonation-scale wave propagation within 2–3% of classical CJ velocity predictions. ANSYS CFX 3D simulations corroborated the reduced-order MATLAB solver's pressure-rise trends to within 14% after ignition kernel repositioning. BlastFOAM/OpenFOAM simulations of the ridged tube geometry (150k-cell full-tube mesh, <em>trueRidged_150k_fullTube</em>) provided direct pressure-field corroboration and softly drove annular ridge design decisions. Structural screening confirmed 17-4PH steel geometry supports the detonation environment with significant margin — providing quantitative justification for hardware fabrication and staged experimental testing.</p>
 
         <!-- ── PROGRAM TIMELINE ───────────────────── -->
         <div class="modal-section-title">Program Timeline</div>
@@ -1149,6 +1209,12 @@
             <div class="tl-dot done"></div>
             <div class="tl-title">Physics-Based Numerical Model <span class="tl-badge done">Complete</span></div>
             <div class="tl-sub">MATLAB 1D HLLC solver with Cantera finite-rate chemistry (GRI-Mech 3.0). CJ conditions, detonation wave propagation, compressible flow, transient thermal and structural loading. Wave speed within 2–3% of CJ theory.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot done"></div>
+            <!-- CORRECTED: BlastFOAM/OpenFOAM as its own complete step for Phase I -->
+            <div class="tl-title">BlastFOAM / OpenFOAM Corroboration — Ridged Tube <span class="tl-badge done">Complete</span></div>
+            <div class="tl-sub">Full-tube ridged geometry meshed and run in BlastFOAM (150k cells, trueRidged_150k_fullTube). Pressure field cross-validated against MATLAB solver. Results softly drove annular ridge geometry design decisions and confirmed DDT-zone behavior.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot done"></div>
@@ -1178,69 +1244,118 @@
           <div class="tl-item">
             <div class="tl-dot done"></div>
             <div class="tl-title">Test Stand Fabrication <span class="tl-badge done">Complete</span></div>
-            <div class="tl-sub">Full hardware assembly. Regenerative cooling architecture, high-pressure ignition system, suppressor and wave-capture system for safe post-detonation depressurization without vacuum chamber infrastructure.</div>
+            <div class="tl-sub">Full hardware assembly. Regenerative cooling architecture, CDI high-pressure ignition system (20.25 J, 200 µF/450 V), suppressor and wave-capture system for safe post-detonation depressurization without vacuum chamber infrastructure.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot active"></div>
-            <div class="tl-title">Hot-Fire Campaign <span class="tl-badge active">Pending</span></div>
-            <div class="tl-sub">C₂H₄/O₂ (1:3, φ = 1.2). Pre-ignition purge, remote initiation, 10 MHz synchronized data capture. Model validation against live pressure trace. Directly extends the published numerical framework.</div>
+            <!-- CORRECTED: Aug 2026 hot-fire date added -->
+            <div class="tl-title">Hot-Fire Campaign <span class="tl-badge active">Scheduled · Aug 2026</span></div>
+            <div class="tl-sub">C₂H₄/O₂ (φ = 1.2). Pre-ignition purge, remote initiation, 10 MHz synchronized data capture. Model validation against live pressure trace. Directly extends the published numerical framework.</div>
           </div>
         </div>
 
         <!-- ── SYSTEM SPECS ───────────────────────── -->
         <div class="modal-section-title">System Specifications</div>
         <table class="spec-table">
+          <!-- CORRECTED: O2/C2H4 (not propane, not kerosene — Phase I is O2/C2H4) -->
           <tr><td>Oxidizer / Fuel</td><td>Oxygen / Ethylene &nbsp;(φ = 1.2, 1:3 ratio)</td></tr>
           <tr><td>Initial Pressure</td><td>1,114,575 Pa (~11 atm) · enables high-pressure detonation environment</td></tr>
-          <tr><td>Peak Pressure (DAF)</td><td>115–117 MPa structural design target</td></tr>
+          <tr><td>Peak Pressure (DAF)</td><td>115–117 MPa structural design target (DAF = 2.0)</td></tr>
           <tr><td>Simulated Peak Pressure</td><td>33.775 MPa at t = 0.163 ms, x = 1.75 ft</td></tr>
           <tr><td>Detonation Wave Speed</td><td>4,357.7 m/s (numerical) vs. 4,300–4,500 m/s CJ band — 2–3% deviation</td></tr>
-          <tr><td>Primary Material</td><td>17-4 PH Stainless Steel, H1100 Heat Treatment</td></tr>
+          <!-- CORRECTED: H1150 (from MATLAB structural report: "17-4 PH Stainless Steel (UNS S17400 / Type 630, H1150 basis)") -->
+          <tr><td>Primary Material</td><td>17-4 PH Stainless Steel, H1150 Heat Treatment</td></tr>
+          <tr><td>Ridge Geometry</td><td>Annular cosine profile · 10 ridges · 0.327 in axial width · 0.188 in radial height · 43.8% blockage · DDT zone first 3.075 ft of 4 ft tube</td></tr>
           <tr><td>DAQ System</td><td>National Instruments PXI · 10 MHz acquisition</td></tr>
+          <tr><td>Ignition System</td><td>CDI circuit · 20.25 J stored energy · 200 µF / 450 V capacitor · 1 MΩ bleeder</td></tr>
           <tr><td>Software Stack</td><td>LabVIEW (acquisition) → MATLAB (post-processing &amp; solver)</td></tr>
-          <tr><td>Computational Tools</td><td>MATLAB, Python, Cantera (GRI-Mech 3.0), ANSYS CFX, SOLIDWORKS, Fusion 360</td></tr>
-          <tr><td>CFD Solver Type</td><td>HLLC finite-volume · operator-split chemistry · k-ω turbulence (CFX) · thick-cylinder Lamé structural</td></tr>
-          <tr><td>Program Status</td><td>Pre-hot fire — test stand complete · numerical framework published</td></tr>
+          <!-- CORRECTED: BlastFOAM added to computational tools -->
+          <tr><td>Computational Tools</td><td>MATLAB, Python, Cantera (GRI-Mech 3.0), BlastFOAM/OpenFOAM, ANSYS CFX, SOLIDWORKS, Fusion 360</td></tr>
+          <tr><td>CFD Solver Type</td><td>HLLC finite-volume · operator-split chemistry · k-ω turbulence (CFX) · BlastFOAM reacting flow · thick-cylinder Lamé structural</td></tr>
+          <tr><td>Program Status</td><td>Pre-hot fire — test stand complete · numerical framework published · hot fire Aug 2026</td></tr>
         </table>
+
+        <!-- ── BlastFOAM/OpenFOAM VISUAL ────────── -->
+        <div class="modal-section-title">BlastFOAM — Ridged Tube Pressure Field</div>
+        <p>Pressure contour from BlastFOAM simulation of the full ridged-tube geometry (150k cells, trueRidged_150k_fullTube). The reacting front propagates left-to-right through the annular ridge array; pressure scale runs 1.0×10⁵ Pa (blue) to 2.2×10⁶ Pa (red). Cross-validated against the published MATLAB HLLC solver result.</p>
+        <div style="margin: 16px 0 8px;">
+          <img src="assets/blastfoam-ridged-tube-pressure-field.png" alt="BlastFOAM pressure field — ridged detonation tube (trueRidged_150k_fullTube)" class="media-real" />
+          <div class="media-caption">BlastFOAM / ParaView · trueRidged_150k_fullTube.foam · Pressure field [Pa] · t = 2.75×10⁻⁴ s</div>
+        </div>
+
+        <!-- ── SUPPLEMENTARY STRUCTURAL RE-SCREEN ── -->
+        <div class="modal-section-title">Supplementary Structural Re-Screen — Ridge-Aware MATLAB Surrogate</div>
+
+        <div class="supplementary-box">
+          <div class="supplementary-box-header">Note · Separate Configuration from Published AIAA Results</div>
+          <p>The following results are from a higher-fidelity MATLAB structural screening run on a revised hardware configuration (17-4 PH H1150, Nx = 400, φ = 1.3 C₂H₄/O₂, 6-ft tube). This is a distinct run from the published AIAA numbers — different material temper, different resolution, lower drive pressure. The published 4,358 m/s and 33.8 MPa results above remain the official peer-reviewed values. This supplementary screen informs ridge geometry and material allowable decisions for fabrication go/no-go.</p>
+        </div>
+
+        <div class="results-callout">
+          <div class="result-cell">
+            <div class="result-val">2,142 <span>m/s</span></div>
+            <div class="result-label">Mean probe wave speed — corrected run (10 inter-probe segments)</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">3.21 <span>MPa</span></div>
+            <div class="result-label">Peak flow pressure at x = 0.83 ft, t = 0.046 ms</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">29.5 <span>MPa</span></div>
+            <div class="result-label">Peak σ_vm × DAF × K_t at Ridge 03 (blockage = 0.435)</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">275.7 <span>MPa</span></div>
+            <div class="result-label">S_allow at RT — 17-4 PH H1150 basis</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">PASS</div>
+            <div class="result-label">Overall screening verdict — 0/400 nodes exceed S_allow, Sy, or UTS</div>
+          </div>
+          <div class="result-cell">
+            <div class="result-val">1.095<span>×</span></div>
+            <div class="result-label">Peak ridge pressure gain G_p — global max at 0.83 ft</div>
+          </div>
+        </div>
+
+        <p>Structural screen applied DAF = 2.0 (single-pass step-load) with ridge stress concentration K_t = 1 + 2.75 × blockage. Peak ridge at x = 0.83 ft (blockage = 0.435) produced K_t = 2.20 and peak σ_vm = 29.5 MPa — well within the 275.7 MPa H1150 allowable. All 400 nodes clear yield, allowable, and UTS checks. Thermal penetration depth 0.042 mm (0.2% of wall) over 0.35 ms event duration confirms negligible thermal influence on structural margins for the single-shot screen.</p>
+
+        <!-- ── SUPPLEMENTARY MATLAB PLOTS ────────── -->
+        <div class="modal-section-title">Structural Screen Plots — Ridge-Aware MATLAB Surrogate</div>
+
+        <div class="media-grid">
+          <div>
+            <img src="assets/structural-cumulative-exceedances.png" alt="Cumulative exceedances (DAF=2.0) — node count vs time" class="media-real" />
+            <div class="media-caption">Cumulative exceedances (DAF = 2.0) · 0 nodes yield, 0 exceed S_allow, 0 exceed UTS</div>
+          </div>
+          <div>
+            <img src="assets/structural-peak-gain-histories.png" alt="Global peak gain histories — G_turb and G_p vs time" class="media-real" />
+            <div class="media-caption">Global peak gain histories · G_turb peaks 1.528× · G_p peaks 1.095× · steady-state ≈1.41× / 1.07×</div>
+          </div>
+          <div class="media-real-wide">
+            <img src="assets/structural-ridge-activation-snapshots.png" alt="Dynamic ridge activation snapshots — activation, turbulence gain, and pressure gain spatial profiles at 5 time steps" class="media-real" />
+            <div class="media-caption">Dynamic ridge activation snapshots · ridge activation, G_turb, and G_p spatial profiles at t = 0.001, 0.089, 0.176, 0.262, 0.350 ms</div>
+          </div>
+          <div>
+            <img src="assets/structural-gain-leading-front.png" alt="Gain sampled at leading detonation front — G_turb and G_p vs time" class="media-real" />
+            <div class="media-caption">Gain at leading front · G_turb front peak 1.329× · G_p front peak 1.059× · periodic ridge-encounter signature visible</div>
+          </div>
+          <div class="media-placeholder">
+            <div class="media-ph-icon">📷</div>
+            <div class="media-ph-label">[ Photo — Test Stand Assembly · Pending ]</div>
+          </div>
+        </div>
 
         <!-- ── ENGINEERING NOTES ──────────────────── -->
         <div class="modal-section-title">Engineering Approach</div>
         <ul>
           <li>Led test stand design as primary decision-maker — owned all hardware decisions across mechanical, electrical, and propulsion subsystems. Team of four engineers with supporting roles.</li>
           <li>Developed the custom MATLAB 1D HLLC solver from scratch: CJ/ZND theory, Euler equations, operator-split Cantera chemistry, shock/detonation front tracking, and Lamé structural screening — all integrated into a single coupled framework. Published.</li>
+          <li>BlastFOAM/OpenFOAM used for direct reacting-flow corroboration of the ridged tube geometry (150k-cell full-tube mesh). Cross-validated against MATLAB solver; results drove annular ridge profile selection.</li>
           <li>ANSYS CFX used for 3D multidimensional corroboration: k-ω turbulence, shear-layer development, and confinement behavior not resolvable in 1D. Identified and resolved secondary wave interference via ignition kernel repositioning.</li>
-          <li>Designed regenerative cooling architecture, high-pressure ignition system, and suppressor/wave-capture system for post-detonation safe depressurization — no vacuum chamber infrastructure.</li>
-          <li>Full operational pipeline: PDR, CoDR, safety board reviews, formal experimental SOP authored for every stage of the test campaign.</li>
+          <li>Designed regenerative cooling architecture, CDI high-pressure ignition system, and suppressor/wave-capture system for post-detonation safe depressurization — no vacuum chamber infrastructure.</li>
+          <li>Full operational pipeline: PDR, CoDR, safety board reviews, formal experimental SOP authored for every stage of the test campaign. Hot-fire scheduled Aug 2026.</li>
         </ul>
-
-        <!-- ── MEDIA ──────────────────────────────── -->
-        <div class="modal-section-title">Media — Test Stand &amp; System Architecture</div>
-        <div class="media-grid">
-          <div class="media-placeholder wide">
-            <div class="media-ph-icon">📷</div>
-            <div class="media-ph-label">[ Photo — Full Test Stand Assembly ]</div>
-          </div>
-          <div class="media-placeholder">
-            <div class="media-ph-icon">📊</div>
-            <div class="media-ph-label">[ Telemetry Plot — Pressure Trace ]</div>
-          </div>
-          <div class="media-placeholder">
-            <div class="media-ph-icon">📊</div>
-            <div class="media-ph-label">[ Solver Output — CJ Conditions ]</div>
-          </div>
-          <div class="media-placeholder">
-            <div class="media-ph-icon">🖼</div>
-            <div class="media-ph-label">[ CAD — Detonation Tube Assembly ]</div>
-          </div>
-          <div class="media-placeholder">
-            <div class="media-ph-icon">🖼</div>
-            <div class="media-ph-label">[ Instrumentation Wiring Architecture ]</div>
-          </div>
-          <div class="media-placeholder wide">
-            <div class="media-ph-icon">🎬</div>
-            <div class="media-ph-label">[ Video — Hot Fire (pending) ]</div>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -1276,9 +1391,9 @@
         </ul>
         <div class="modal-section-title">Media</div>
         <div class="media-grid">
-          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ NI PXI Chassis Setup ]</div></div>
-          <div class="media-placeholder"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Signal Flow Diagram ]</div></div>
-          <div class="media-placeholder wide"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Live Telemetry Screenshot ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ NI PXI Chassis Setup · Pending ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Signal Flow Diagram · Pending ]</div></div>
+          <div class="media-placeholder wide"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Live Telemetry Screenshot · Pending ]</div></div>
         </div>
       </div>
     </div>
@@ -1313,10 +1428,10 @@
         </ul>
         <div class="modal-section-title">Media</div>
         <div class="media-grid">
-          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Platform — Generation 1 ]</div></div>
-          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Platform — Generation 4 ]</div></div>
-          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ CAD — Airframe Design ]</div></div>
-          <div class="media-placeholder"><div class="media-ph-icon">🎬</div><div class="media-ph-label">[ Video — Field Deployment ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Platform — Generation 1 · Pending ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Platform — Generation 4 · Pending ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ CAD — Airframe Design · Pending ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">🎬</div><div class="media-ph-label">[ Video — Field Deployment · Pending ]</div></div>
         </div>
       </div>
     </div>
@@ -1333,10 +1448,11 @@
         <button class="modal-close" onclick="closeModal('modal-avionics')">✕ Close</button>
       </div>
       <div class="modal-body">
-        <p>Electrical engineering internship at Canyon AeroConnect focused on avionics hardware integration, electronics validation, PCB-level debugging, and manufacturing workflows for flight-critical aerospace systems. Work includes schematic review, board bring-up, signal integrity analysis, hardware reliability improvement, and supplier/manufacturing coordination.</p>
+        <p>Electrical engineering internship at Canyon AeroConnect focused on avionics hardware integration, electronics validation, PCB-level debugging, and manufacturing workflows for flight-critical aerospace systems. Work includes schematic review, board bring-up, signal integrity analysis, hardware reliability improvement, and supplier/manufacturing coordination through to production release.</p>
         <div class="modal-section-title">Notable Technical Work</div>
         <ul>
-          <li>Redesigned PCB filtered connector architecture to unfiltered connectors with discrete capacitor pre-stage to resolve a component lead-time constraint — maintained EMI compliance and impedance matching throughout</li>
+          <!-- CORRECTED: "approved and released to manufacturing" per resume -->
+          <li>Redesigned PCB filtered connector architecture to unfiltered connectors with discrete capacitor pre-stage to resolve a component lead-time constraint — maintained EMI compliance and impedance matching throughout. Design approved and released to manufacturing.</li>
           <li>Schematic review, bring-up testing, and hardware failure debugging across avionics board-level systems</li>
           <li>Generated ECOs, ECRs, EDRs, and Problem Reports while coordinating with suppliers, QA teams, and manufacturing contractors</li>
         </ul>
@@ -1349,7 +1465,7 @@
         </table>
         <div class="modal-section-title">Media</div>
         <div class="media-grid">
-          <div class="media-placeholder wide"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ PLACEHOLDER — Lab / Hardware Photo ]</div></div>
+          <div class="media-placeholder wide"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Lab / Hardware Photo · ITAR restricted ]</div></div>
         </div>
       </div>
     </div>
@@ -1374,7 +1490,7 @@
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
             <div style="font-family:var(--mono);font-size:11px;color:var(--text-muted);">
               <span style="color:var(--green);">✓</span> PRJ-001 — Detonation Tube (Phase I)
-              <span style="font-size:10px;color:var(--text-dim);display:block;margin-top:2px;">Published AIAA 2026-108393 · Test stand complete · Hot fire pending</span>
+              <span style="font-size:10px;color:var(--text-dim);display:block;margin-top:2px;">Published AIAA 2026-108393 · Test stand complete · Hot fire Aug 2026</span>
             </div>
             <div style="font-family:var(--mono);font-size:14px;color:var(--border2);">→</div>
             <div style="font-family:var(--mono);font-size:11px;color:var(--text-muted);">
@@ -1389,7 +1505,7 @@
           <div class="tl-item">
             <div class="tl-dot done"></div>
             <div class="tl-title">Phase I Complete — Published <span class="tl-badge done">Done · PRJ-001</span></div>
-            <div class="tl-sub">Detonation tube test stand complete. HLLC solver and ANSYS CFX numerical framework validated and published in AIAA proceedings (DOI: 10.2514/6.2026-108393). Hot fire pending.</div>
+            <div class="tl-sub">Detonation tube test stand complete. HLLC solver, BlastFOAM/OpenFOAM, and ANSYS CFX numerical framework validated and published in AIAA proceedings (DOI: 10.2514/6.2026-108393). Hot fire Aug 2026.</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot active"></div>
@@ -1411,6 +1527,12 @@
             <div class="tl-title">Full CFD — Reacting Flow Simulation <span class="tl-badge pending">Upcoming</span></div>
             <div class="tl-sub">Full annular RDE reacting flow in OpenFOAM. Detonation wave initiation, propagation, pressure field characterization. Feed into hardware design cycle.</div>
           </div>
+          <!-- CORRECTED: Apr 2027 cold-flow date added -->
+          <div class="tl-item">
+            <div class="tl-dot pending"></div>
+            <div class="tl-title">Injector Cold-Flow Campaign <span class="tl-badge pending">Scheduled · Apr 2027</span></div>
+            <div class="tl-sub">Formal LOX/kerosene cold-flow test campaign. Validate injector mass flow distribution, spray pattern, and manifold pressure drop against CFD predictions. Feeds directly into hot-fire readiness review.</div>
+          </div>
           <div class="tl-item">
             <div class="tl-dot pending"></div>
             <div class="tl-title">RDE Hardware Design &amp; Fabrication <span class="tl-badge pending">Upcoming</span></div>
@@ -1426,6 +1548,7 @@
         <div class="modal-section-title">System Parameters (Preliminary)</div>
         <table class="spec-table">
           <tr><td>Configuration</td><td>Annular rotating detonation engine</td></tr>
+          <!-- LOX/Kerosene confirmed correct for Phase II -->
           <tr><td>Propellants</td><td>LOX / Kerosene</td></tr>
           <tr><td>Injector Type</td><td>Impinging element</td></tr>
           <tr><td>Modeling Tools</td><td>MATLAB, Python, Cantera — extended from published Phase I solver</td></tr>
@@ -1435,10 +1558,10 @@
 
         <div class="modal-section-title">Media</div>
         <div class="media-grid">
-          <div class="media-placeholder wide"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Preliminary CJ Sizing — LOX/Kerosene ]</div></div>
-          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Injector — Spray Characterization ]</div></div>
-          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ OpenFOAM — Annular Mesh Setup ]</div></div>
-          <div class="media-placeholder wide"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ Annular Chamber Concept Geometry ]</div></div>
+          <div class="media-placeholder wide"><div class="media-ph-icon">📊</div><div class="media-ph-label">[ Preliminary CJ Sizing — LOX/Kerosene · Pending ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">📷</div><div class="media-ph-label">[ Injector — Spray Characterization · Pending ]</div></div>
+          <div class="media-placeholder"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ OpenFOAM — Annular Mesh Setup · Pending ]</div></div>
+          <div class="media-placeholder wide"><div class="media-ph-icon">🖼</div><div class="media-ph-label">[ Annular Chamber Concept Geometry · Pending ]</div></div>
         </div>
 
       </div>
